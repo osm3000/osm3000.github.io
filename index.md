@@ -1,26 +1,17 @@
-### Overview
+
+
+[Blog](./pages/blog/first.md), [Publications](./pages/publications.md), [Experiments](./pages/experiments.md), [About me](./pages/about.md)
+
+
 
 [Jump to publications](### Publications)
 
-[Blog](./pages/blog/first.md)
 
-<img align="left" src="src/personal.jpg" width="15%">
-I am a 2nd year PhD student at [GIPSA-lab](www.gipsa-lab.fr/), CRISSP team, [University of Grenoble-Alpes](https://www.univ-grenoble-alpes.fr/). My work focus is on style extraction and action generation for human activity, using deep neural networks.
+<img align="right" src="src/personal.jpg" width="25%">
 
-I did my masters degree in [Machine Learning and Data Mining](https://mldm.univ-st-etienne.fr/), a collaborative program between University of Jean-Monnet (Saint-Etienne, France) and University of Alicante (Alicante, Spain), class 2016.
+Hi there
 
 Interests: Deep Learning, Adversarial Learning, Evolutionary Optimization.
-
-### Publications
-* **O.Mohammed**, G.Bailly, D.Pellier. Style transfer and extraction for the handwritten letters using deep learning: methodology and analysis, in-review for journal publication.
-* **O.Mohammed**, G.Bailly, D.Pellier. Style transfer and extraction for the handwritten letters using deep learning. 2019 ICAART (International Conference on Agents and Artificial Intelligence), Prague, Czech Republic.
-* **O.Mohammed**, G.Bailly, D.Pellier. Handwriting styles: benchmarks and evaluation metrics. Fifth International Conference on Social Networks Analysis, Management and Security (SNAMS), 2018. Valencia, Spain.
-* Gerazov, B., G. Bailly, **O. Mohammed**, Y. Xu & P. Garner, A Variational Prosody Model for the decomposition and synthesis of speech prosody, in-review for journal publication.
-* Gerazov, B., G. Bailly, **O. Mohammed** & Y. Xu (2018), Embedding Context-Dependent Variations of Prosodic Contours using Variational Encoding for Decomposing the Structure of Speech Prosody, 2018 Workshop on Prosody and Meaning: Information Structure and Beyond, Aix-en-Provence, France
-* Marielle MALFANTE, **Omar MOHAMMED**, Cédric GERVAISE, Mauro DALLA MURA, Jérôme I. MARS, Use of deep features for the automatic classification of fish sounds, 2018 OCEANS - MTS/IEEE Kobe Techno-Ocean
-* Omar MOHAMMED, Gerard Bailly, Damien Pellier, Acquiring Human-Robot Interaction skills with Transfer Learning Techniques, HRI '17 Proceedings of the Companion of the 2017 ACM/IEEE International Conference on Human-Robot Interaction
-* **Omar Samir**, Moustafa Kassem, Mohammed Sameh, Sarah Aly, Mohamed Rizk, Mohamed Abdelsalam and Ashraf Salem. A Novel Approach for Functional Verification of Memory Protocol Standards, The International Design and Test Symposium (IDT - December 2012)
-* Mohamed Elmoghany, Mohamed Diab, Moustafa Kassem, Mustafa Khairallah, **Omar El Shahat** and Wael Sharkasy. FPGA Implementation of High Speed XTS-AES for Data Storage Devices, 6th International Conference for Internet Technology and Secured Transactions (ICITST - December 2011).
 
 <!-- ### Welcome to GitHub Pages.
 This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new `gh-pages` branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.
