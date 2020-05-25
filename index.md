@@ -1,6 +1,6 @@
 
 
-[Blog](./pages/blog/first.md), [Publications](./pages/publications.md), [Experiments](./pages/experiments.md), [About me](./pages/about.md)
+[Blog](./pages/blog.md), [Publications](./pages/publications.md), [Experiments](./pages/experiments.md), [About me](./pages/about.md)
 
 
 
@@ -9,9 +9,16 @@
 
 <img align="right" src="src/personal.jpg" width="25%">
 
-Hi there
+Hi there,
 
-Interests: Deep Learning, Adversarial Learning, Evolutionary Optimization.
+My name is Omar Mohammed, from Egypt. This personal website is an idea that I am not yet sure about, but given the trends, I think it is worth trying.
+
+My objectives from having this website are:
+* Provide a new kind of research form: during my PhD, I became more and more skeptical about the current format and pactises in research, from the way papers are written, to the need to publish half-ass results in order to meet the deadlines and the pressure to validate themselves. I want to do science for science.
+* Sharing my personal projects, to encourage myself from one side, and maybe have a feedback from others as well
+* Sharing thoughts about life and ... life.
+
+<!-- Interests: Deep Learning, Adversarial Learning, Evolutionary Optimization. -->
 
 <!-- ### Welcome to GitHub Pages.
 This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new `gh-pages` branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.
