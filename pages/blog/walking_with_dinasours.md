@@ -11,3 +11,23 @@ We are really so small in face of all that history, and we don't yet absorb the 
 Another thing I felt, and it was reflected by an [interview with Stephen Fry](https://www.youtube.com/watch?v=39ya2Drpj3s) about his book about bears: animals are only concerned about being themselves, bears being bears, elephants being elephants...except humans, we want to be someone/something else. Biased by this idea, it is easy to reflect upon it while watching the dinosaurs documentary.
 
 Can we really manage the challenges that lie ahead, from global warming, population increase, pollution, ...etc? Do we have the knowledge and wisdom to save ourselves, and other species on this planet? Can we control nature, or at least some aspects of it? One wonders...
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://osm3000-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
