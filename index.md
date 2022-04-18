@@ -11,6 +11,8 @@
 
 Hi there,
 
+Hi from here and there
+
 My name is Omar Mohammed, from Egypt. This personal website is an idea that I am not yet sure about, but given the trends, I think it is worth trying.
 
 My objectives from having this website are:
