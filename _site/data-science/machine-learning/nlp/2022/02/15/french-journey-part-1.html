@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A view on France - Part 1 | OSM3000</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="A view on France - Part 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For whatever reason, even though I live in France for ~8 years now, I still struggle with learning French. My environment is always in English all the time, and all my French friends speak good English as well. To my surprise, speaking French is not a deal breaker as I once thought." />
+<meta property="og:description" content="For whatever reason, even though I live in France for ~8 years now, I still struggle with learning French. My environment is always in English all the time, and all my French friends speak good English as well. To my surprise, speaking French is not a deal breaker as I once thought." />
+<link rel="canonical" href="http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html" />
+<meta property="og:url" content="http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html" />
+<meta property="og:site_name" content="OSM3000" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-15T23:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A view on France - Part 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-15T23:00:00+01:00","datePublished":"2022-02-15T23:00:00+01:00","description":"For whatever reason, even though I live in France for ~8 years now, I still struggle with learning French. My environment is always in English all the time, and all my French friends speak good English as well. To my surprise, speaking French is not a deal breaker as I once thought.","headline":"A view on France - Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html"},"url":"http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="OSM3000" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">OSM3000</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/phd-work/">My PhD Work</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A view on France - Part 1</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-02-15T23:00:00+01:00" itemprop="datePublished">Feb 15, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>For whatever reason, even though I live in France for ~8 years now, I still struggle with learning French. My environment is always in English all the time, and all my French friends speak good English as well. To my surprise, speaking French is not a deal breaker as I once thought.</p>
+
+<p><a href="https://github.com/osm3000/Language-Analysis">All the code used in this analysis can be fine here</a>.</p>
+
+<h2 id="solutions-that-itried">Solutions that I tried</h2>
+
+<p>The road started normally, with dreams that working hard will do the trick, and that this problem is pretty much solved long time ago. Unfortunately, that proved to be not the case — for me at least. I tried:</p>
+
+<ul>
+  <li>Apps like Babbel and Duolingo: Incredibly frustrating experience. Words that doesn’t seem to be used anywhere else. Whatever progress I make in the app (and trust me, I did a lot of progress) doesn’t seem to translate into reality at all. I don’t feel my comprehension or my ability to speak improved in any significant manner after few months of regular use of these apps. </li>
+  <li>Listening to TV series and programs: I just don’t like TV series or reality shows or any of that in general. It didn’t take long before I stopped this direction. </li>
+  <li>Listening to podcasts/videos on my favorite topics: mainly technical interests. That was quite helpful for sometime. It is a passive activity though.</li>
+  <li>Community teachers: in platforms like <a href="https://www.italki.com/">italki</a>. A lot of progress were made there, but it is not easy to find enough good teachers or sustainable appointments. My objective was 1 hour of French everyday. No one teacher could satisfy this requirement. I ended up between 4~5 amazing teachers, but it is hard to coordinate and reserve the time. It was always a complex optimization problem.</li>
+  <li>Courses in language centers: it was always incredibly expensive, hard to find on short notice, inflexible time slots that doesn’t fit with my work.</li>
+</ul>
+
+<p>In short, no luck :( </p>
+
+<h2 id="time-for-the-technical-hammer">Time for the technical hammer</h2>
+
+<p>My idea is to try to systematically understand what are the characteristics of the French language really is, and use that to design a data-driven curriculum for myself.</p>
+
+<p>To understand the French language, I decided to analyze the articles in LeMonde newspaper. I scrapped a considerable amount of corpus, ~13K articles, from different domains. Using some basic NLP and frequency analyses, I am hoping to reach some insights about what the language is, that can enhance the quality of my decisions.</p>
+
+<p>When analyzing the verbs, I decided to convert all the verbs to their original form (the simple present). Otherwise, it creates a lot of unnecessary clutter in the analysis.</p>
+
+<h2 id="overview-on-theresults">Overview on the results</h2>
+
+<p><a href="https://osm3000.files.wordpress.com/2022/02/wordcloud_allwords.png"><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_allwords.png?w=1024" alt="" /></a></p>
+
+<p>Word-cloud for all the words</p>
+
+<p>One can see that verbs like <em>avoir</em>, <em>etre</em>, and connectors like <em>qui</em>, <em>que</em>, <em>et</em> and <em>il</em> are the highest recurring words in the French language.</p>
+
+<p>Let’s take a closer look at separate categories of those words: adverbs, verbs and nouns.</p>
+
+<ul>
+  <li>
+    <p><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_alladverbs.png?w=1024" alt="" /></p>
+  </li>
+  <li>
+    <p><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_allverbs.png?w=1024" alt="" /></p>
+  </li>
+  <li>
+    <p><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_allnouns.png?w=1024" alt="" /></p>
+  </li>
+</ul>
+
+<p>My personal interest is to convert these words into flashcards, and based on their frequency and importance (I will tackle the <em>importance</em> part later), I can focus on what really matter.</p>
+
+<p>Although not a quantitative analysis, if you ever used tools like Babbel or Duolingo before, you might notice that there is an asymmetry between their words and those words. For example, on of the things you learn at the beginning in those applications are words like: garcon, fille, fils, pere, mere, ….etc, but you can notice that none of those words appears in those in big font in those word-clouds. </p>
+
+<h3 id="how-many-articles-should-i-read">How many articles should I read?</h3>
+
+<p>Another issue of interest for me is: how many articles I do need to read in order to have been exposed to most of the words? I rephrased this problem in what I call the ‘insertion speed’: how much each article contribute with new unique words? </p>
+
+<p>The way I did it was not a comprehensive/realistic method in my opinion, but a fast and a quick lower-limit indicator. Basically, for each article, I measured how many words I didn’t see before, then add those new words to my seen-words-list, and move on to the next article, …etc. I ordered the resulting list — since it is noisy — in order to get a sense of what we are talking about.</p>
+
+<p><a href="https://osm3000.files.wordpress.com/2022/02/insertionspeedordered.png"><img src="https://osm3000.files.wordpress.com/2022/02/insertionspeedordered.png?w=1024" alt="" /></a></p>
+
+<p>One can see that, with around ~500 article, there is barely any new word added to the seen words. </p>
+
+<p>What I really like about the insertion speed is that it could be a way to manage my personal training procedure. If I’ve a system that is aware of the words I know so far (through articles I read, or manually inserted words), the system can then keep suggesting articles, in the area of interest, that either focus on older vocabulary (to enhance it), thus, having a small-to-no insertion speed, or to focus on learning new words, thus, asking the system for articles with higher insertion speed. </p>
+
+<p>This could be more beneficial, since it changes the personal training system from the sole focus on flashcards, to article-based learning (you will learn new words by reading the articles mentioning those words).</p>
+
+<p>With a large enough repertoire of articles — and even an easy manner to add new articles — I can definitely imagine a pretty good training procedure.</p>
+
+<h4 id="word-frequencies">Word Frequencies</h4>
+
+<p>What is really fascinating for me is the quantification of the long-tail phenomena in French (spoiler alert: MASSIVE long tail). To get an idea, let’s look at some numbers.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~7.6M words
+Number of unique words: ~116K words
+10% of the total words seen is just 3 unique words
+20% of the total words seen is just 17 unique words
+50% of the total words seen is just 375 unique words
+80% of the total words seen is just 2624 unique words
+90$ of the total words seen is just 6506 unique words
+</code></pre></div></div>
+
+<p>Even though the long-tail phenomena is expected, it is still mind-blowing for me to see it in action like this.</p>
+
+<p>While aggregation is always amazing to get a good overview over the topic, it’s interesting to dive deeper and see more specific details. Let’s look at the same stats, but for verbs, nouns, and adverbs</p>
+
+<p>Verbs</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~1.2M verb
+Number of unique words: ~11.5K verb
+10% of the total verbs seen is just 3 unique verb
+20% of the total verbs seen is just 14 unique verb
+50% of the total verbs seen is just 139 unique verb
+80% of the total verbs seen is just 585 unique verb
+90% of the total verbs seen is just 1117 unique verb
+</code></pre></div></div>
+
+<p>Nouns</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~2.8M noun
+Number of unique words: ~41.6K noun
+10% of the total verbs seen is just 27 unique noun
+20% of the total verbs seen is just 77 unique noun
+50% of the total verbs seen is just 408 unique noun
+80% of the total verbs seen is just 1731 unique noun
+90% of the total verbs seen is just 3599 unique noun
+</code></pre></div></div>
+
+<p>Adverbs</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~604K adverb
+Number of unique words: ~3.4K adverb
+10% of the total verbs seen is just 0 !! unique adverb
+20% of the total verbs seen is just 1 unique adverb
+50% of the total verbs seen is just 11 unique adverb
+80% of the total verbs seen is just 49 unique adverb
+90% of the total verbs seen is just 94 unique adverb
+</code></pre></div></div>
+
+<p>All-in-all, assuming that being good at French is about mastering <strong>80%</strong> of the words, then I should focus on the <strong>2624</strong> words for the moment, over <strong>2/3</strong> of them are nouns and less than <strong>1/3</strong> are verbs. I can easily now transfer this into flash-cards, and dig into them :)</p>
+
+<p>These are the links for those lists: <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allWords.csv">all words</a>, <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allVerbs.csv">verbs</a>, <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allNouns.csv">nouns</a> and <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allAdverbs.csv">adverbs</a>. Maybe you can use them for your own application :)</p>
+
+<h2 id="origin-of-thedata">Origin of the data</h2>
+
+<p>I have built my database by scraping <a href="https://www.lemonde.fr/"><em>LeMonde</em></a> articles. After some investigation, I realized that the articles are organized in categories, in the form of </p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.lemonde.fr/&lt;category&gt;
+</code></pre></div></div>
+
+<p>The categories are so many, and it is not clear how to get a comprehensive list of them — or if that is the best approach. But, one can at least enumerate some of the interesting categories from the navigation bar. A better way would have been to parse the <a href="https://www.lemonde.fr/archives-du-monde/">archive of LeMonde</a>.</p>
+
+<p>Within each article, you can look for the following tags in order to get the relevant information in the HTML source:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;description&gt; : &lt;tag type&gt; - &lt;class name&gt;
+Author name: span - author__name
+Article description: p - article__desc
+Article paragraphs: p - article__paragraph
+Image links: figure &gt; img - &lt;No class name&gt;
+Image captions figure &gt; figcaption - &lt;No class name&gt;
+</code></pre></div></div>
+
+<p>You should be able to scrap any article you like immediately with this info :)</p>
+
+<p>To support the work of the journalists in LeMonde, I made a subscription in LeMonde. An added advantage is to get access to the full premium articles. Without a subscription however, using the same script, I can access the free part of the premium articles (almost 1/3 of the article).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I started this little exercise out of frustration, and the more I dived into it, the more exciting it turned to be. As potential clear outcomes, one can now:</p>
+
+<ol>
+  <li>Make flashcards of the important words, and focus on them, based on the uni-gram/word frequency analysis.</li>
+  <li>Prepare an article/application based learning: if I can keep count of the insertion speed, and the current words that I know, and given that I’ve a repertoire of articles, the system can recommend me the next article to read, based on criteria in between the two extreme:
+    <ol>
+      <li>I want to learn as many new words as possible (max insertion)</li>
+      <li>I want to practice what I know only (min/zero insertion)</li>
+    </ol>
+  </li>
+  <li>Analyze the quality of my writing:</li>
+</ol>
+
+<p>But one can imagine even more applications here, for example:</p>
+
+<ol>
+  <li>Bi-gram/tri-gram analysis: time to focus on making sentences. Single words are interesting and all, but small repetitive pieces of sentences are much more powerful to learn. It will cut the thinking time considerably.</li>
+  <li>Importance analysis: with techniques like TF-IDF, what are the important words in French? so far, I focused on the common words only.
+    <ol>
+      <li>Also perform this analysis per domain. It might help to ease the entry to specific domain (like science, technology, sport, …etc) by getting the key words in that domain.</li>
+    </ol>
+  </li>
+  <li>Cross this data with other data: one topic of interest for me is to understand the politicians and the media, and their inter-relationship. Recently, I got access to Twitter APIs. I would like to go deeper into what the french politicians talk about, their interaction, how and when a story breaks, …etc.</li>
+</ol>
+
+<p>I would love to know what you think :)</p>
+
+  </div><a class="u-url" href="/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">OSM3000</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">OSM3000</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I believe in enhancing human live and creating a better world through engineering and great designs that capture the nature&#39;s beauty, system and patterns.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

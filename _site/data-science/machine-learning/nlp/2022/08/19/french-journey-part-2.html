@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A view on France - Part 2 | OSM3000</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="A view on France - Part 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Following on my journey to explore the French language (check part 1), in this part I wanted to better understand how to many articles do I need to read randomly from LeMonde in order to reach my learning objectives, and if there is a way to guide this process (instead of just random articles). The code for the simulation is here, the analysis is available here." />
+<meta property="og:description" content="Following on my journey to explore the French language (check part 1), in this part I wanted to better understand how to many articles do I need to read randomly from LeMonde in order to reach my learning objectives, and if there is a way to guide this process (instead of just random articles). The code for the simulation is here, the analysis is available here." />
+<link rel="canonical" href="http://localhost:4000/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html" />
+<meta property="og:url" content="http://localhost:4000/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html" />
+<meta property="og:site_name" content="OSM3000" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-19T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A view on France - Part 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-19T00:00:00+02:00","datePublished":"2022-08-19T00:00:00+02:00","description":"Following on my journey to explore the French language (check part 1), in this part I wanted to better understand how to many articles do I need to read randomly from LeMonde in order to reach my learning objectives, and if there is a way to guide this process (instead of just random articles). The code for the simulation is here, the analysis is available here.","headline":"A view on France - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html"},"url":"http://localhost:4000/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="OSM3000" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">OSM3000</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/phd-work/">My PhD Work</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A view on France - Part 2</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-08-19T00:00:00+02:00" itemprop="datePublished">Aug 19, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Following on my journey to explore the French language (check <a href="https://osm3000.wordpress.com/2022/02/16/a-view-on-france-part-1/">part 1</a>), in this part I wanted to better understand how to many articles do I need to read randomly from LeMonde in order to reach my learning objectives, and if there is a way to guide this process (instead of just random articles). The code for the <a href="https://github.com/osm3000/Language-Analysis/blob/dirty_experiment/heavy_exp.py">simulation is here</a>, the analysis is <a href="https://github.com/osm3000/Language-Analysis/blob/dirty_experiment/number_of_articles_to_master_french.ipynb">available here</a>.</p>
+
+<h1 id="boring-background">Boring background</h1>
+
+<p>A question that always fascinated me to quantify the learning of a new language.</p>
+
+<ol>
+  <li>How to represent the ‘learning process’ in an objective way?</li>
+  <li>How much effort is required to reach this objective?</li>
+  <li>Can I optimize my efforts in order to achieve higher efficiency?</li>
+</ol>
+
+<p>Beside curiosity, the motivation from this analysis is pave the way building a learning system for myself, that can monitor my training and progress, and optimize my learning trajectory.</p>
+
+<p>Of course, it can be argued that maybe it is better to spend the time in actually learning French than analyzing it. There are two points here:</p>
+
+<ol>
+  <li>Despite huge efforts to learn French (and to some extent I can speak and comprehend what people are saying at the moment), the gains have been low. Believe it or not, in academia and a lot of tech companies nowadays, there is no natural need/urgency to speak French! And everyone speaks English.</li>
+  <li>I like to understand how things work from first principles point of view.</li>
+  <li>I realize more and more that, even in English, my vocabulary is becoming more and more limited. Being in France, speaking English with people from many nationalities, you end up mastering what’s called “international English” and build a habit for using simpler, limited set of vocabulary.</li>
+</ol>
+
+<p>Vocabulary are the building blocks for thinking. It represents the ability to abstract concepts and ideas, thus, it allows me to remove the clutter, and see connections and relations that were not obvious before.<br />
+Thus, aside from French, I would like to use such a system for English as well, to maintain or expand or my skills.</p>
+
+<p>While I am focusing on <em>reading articles from LeMonde</em> as the only way to learn, which is unrealistic for sure, it is a start. One can imagine combining this data from other streams of data (which I will do), like Twitter, Reddit, Podcast/Video transcripts, ….etc.</p>
+
+<p>Plus, most importantly, I fucking love numbers :D</p>
+
+<h1 id="assumptions">Assumptions</h1>
+
+<p>It is important to consider the simplifications and assumptions made here in this analysis</p>
+
+<ol>
+  <li>I am assuming that learning French = learning 80% of the most common French vocabulary. This is ~2600 words. To understand how I got those words, check <a href="https://osm3000.wordpress.com/2022/02/16/a-view-on-france-part-1/">part 1</a>.
+    <ol>
+      <li>The previous analysis was done on a small sample of articles, mostly from the recent couple of years. I have redone this calculation from scratch for the 1 million LeMonde articles used in this new analysis, and concluded that 80% of the French language is ~3500 words.</li>
+    </ol>
+  </li>
+  <li>“Learning those words” translates to: seeing each word at least 10 times.</li>
+  <li>Every 100 articles, I model “memory loss”: for each word of the target vocabulary that I didn’t see in the last 100 articles, I will reduce its score by 1 point (If you don’t practice, you will forget).</li>
+  <li>While it is simplified to translate learning French to learning 80% of the words, and it is focused only on the “reading” part, and it might be criticized as language is more than just words, I would argue that it can be an <em>okay</em> proxy:
+    <ol>
+      <li>You are not learning the words in isolation here, that is the beauty of learning by reading articles.</li>
+      <li>The more you articles, the more likely that you will see different combinations and uses of those words.</li>
+      <li>The definite and ultimate test here is a random-controlled experiment: try on two groups of people, a control group (using the naive approach) and the optimized one. Which one perform better? However, it is unlikely I would be able to perform such an experiment. Maybe my analysis will encourage someone to do so :)</li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="how-does-the-optimization-works">How does the optimization works?</h1>
+
+<p>It is a simple mix of random + greedy optimization. To select the next article to read:</p>
+
+<ol>
+  <li>Sample 100 articles from the whole dataset.</li>
+  <li>Select the one of them article that maximizes the learning objective.</li>
+</ol>
+
+<h1 id="results-of-different-approaches-to-learning">Results of different approaches to learning</h1>
+
+<p>One can imagine that the good thing to do is to practice everyday (which is in general a good thing to do). Normally, you will focus on a couple of topics that interests you, read an article from here or there. Basically, this mounts to picking up random articles (to some extent).</p>
+
+<p>This is how your performance will look like this:</p>
+
+<p><a href="https://osm3000.files.wordpress.com/2022/06/something_2-2.png"><img src="https://osm3000.files.wordpress.com/2022/06/something_2-2.png?w=1024" alt="" /></a></p>
+
+<p>Progress in achieving the objective if you pick up articles at random (in blue) vs using an optimized/curated set of articles (in orange)</p>
+
+<p>Here you see the traditional wisdom of diminishing returns (or in some avenue that 80-20 rule), which is expected. You progress fast at the</p>
+
+<p>It is very difficult to hit the objective in this scenario of 100%.</p>
+
+<p>However, with optimized articles, we can see that it you can hit your objective in less than 400 articles. The difference is massive!</p>
+
+<h1 id="years-distributions-for-both-strategies"><em>Years</em> distributions for both strategies</h1>
+
+<ul>
+  <li>
+    <p><img src="https://osm3000.files.wordpress.com/2022/08/random_years_distribution.png?w=1024" alt="" /></p>
+  </li>
+  <li>
+    <p><img src="https://osm3000.files.wordpress.com/2022/08/optimized_years_distribution.png?w=1024" alt="" /></p>
+  </li>
+  <li>
+    <p><img src="https://osm3000.files.wordpress.com/2022/08/years_absolute_difference-1.png?w=1024" alt="" /></p>
+
+    <p>This is the frequency of years for optimized strategy - random strategy</p>
+  </li>
+</ul>
+
+<p>Is this difference statistically significant? YES! And visually clear too! For years 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022. This is basically all the visually different years that you see in the previous graphs.</p>
+
+<p>There is also a difference between both strategies in focusing on different years. We see the years from 2014 until now having increasing importance for the optimized strategy, in comparison with the random strategy.</p>
+
+<h1 id="topics-distributions-for-both-strategies"><em>Topics</em> distributions for both strategies</h1>
+
+<p>I have also looked the category of topics from which these articles come from. This one wasn’t clear how to analyze to how look at.</p>
+
+<p>I will spare you the line the thinking and all the annoyances that came with it. But let’s say the final outcome is this specific question: given the two strategies, is there a difference between the frequency of the topics in both cases?</p>
+
+<p>If we consider the frequency only and consider the top 25 topics only (from each strategy, there is around 295 topics generated), we can see that there is a statistical difference almost in every topic. Which is COOL! until you see what that looks like exactly.</p>
+
+<p><a href="https://osm3000.files.wordpress.com/2022/06/top_25_topics_means-1.png"><img src="https://osm3000.files.wordpress.com/2022/06/top_25_topics_means-1.png?w=1024" alt="" /></a></p>
+
+<p>The percentage of appearance (on the X axis) for difference topics in both strategies. Although you can see some differences, it is hard for me to say that these are fundamentally different.</p>
+
+<p>It is hard to make such conclusion of significance difference visually, unlike in the case of the years. The differences increase when the topics are less frequent, but that is not a surprise. From one side, maybe a bigger sample is needed to get a good estimation about the actual distribution of the topics in the data, and from the other side, the optimization might have been working too hard to squeeze any drop of performance from anywhere.</p>
+
+<p>So, instead of frequencies, I looked at the ranking of 25 most important topics in both strategies. Now we can start to more clearer differences.</p>
+
+<p><a href="https://osm3000.files.wordpress.com/2022/06/top_25_topics_ranking-2.png"><img src="https://osm3000.files.wordpress.com/2022/06/top_25_topics_ranking-2.png?w=1024" alt="" /></a></p>
+
+<p>Looking at the ranking of the topic instead of the frequency gives a different perspective. High ranking means high frequency. Some differences exist for the top topics. But when you go to the lower topics, the differences become much clearer.</p>
+
+<p>For the first 14 topics, the differences are not that much, but for the next 11 topics, we can see clear differences. For example, there is almost 10 points difference in the ranking ‘sciences’ between both strategies.</p>
+
+<h1 id="closing-remarks">Closing remarks</h1>
+
+<p>I hope I have given an indication to support the case for optimized strategy <em>vs</em> a naive one.</p>
+
+<p>On the surprising part for me: I didn’t expect that some years are more important than other years! I didn’t it for the Lolz mainly, but that was a cool outcome.</p>
+
+<p>I am not surprised that there is a difference in the topics, but the dimensions of this difference (like in the topic ‘sciences’ for example) are surprising for me.</p>
+
+<h1 id="things-to-consider-for-later">Things to consider for later</h1>
+
+<p>What I like about a project is when it breeds new projects and ideas, and new questions to address :)</p>
+
+<ol>
+  <li>Some parts of this analysis were very time consuming from the computer, and multiple activities were using a fraction of the computer power, but they were blocking activities. This is really annoying. Fast iterations are key in order to explore new ideas. There are few directions I am considering from this point:
+    <ol>
+      <li>I need to profile each piece of code that I wrote: in general, this is a good practice. There can be ways to increase the efficiency from one, or a need to rethink about the problem in a different way that is more efficient. As a good rule of thumb, there is usually a better way.</li>
+      <li>Use statistical samples instead of doing exhaustive search: I think this is the direction I am more interested in, and closer to my experience. The main challenge for me in this project is to move from the ‘exhaustive’ mindset to a statistical mindset. I definitely underestimated the time needs in this project.</li>
+      <li>Use different framework: I intend to explore Spark for NLP at one point. I don’t yet what it can bring to this type of analysis. To be seen.</li>
+      <li>Invest more in pre-processing: for example, extract a bag of words for each article in advance, and store it in the database. That will make it easy to perform some aspects of this analysis. However, this does have its drawbacks.
+        <ol>
+          <li>In this kind of exploratory projects, it is hard to know what do I want in advance. The questions evolve with time.</li>
+          <li>The hard disk consumption is high (~30 Gb already for the current data). Adding a lot of metadata just because I can will add extra storage usage, which is not wise at the moment.</li>
+        </ol>
+      </li>
+      <li>Moving the work to a bigger machine: happening soon.</li>
+      <li>More emphasis on using the database: yes, I still have the tendency to use ‘.json’ files over proper use of the database. In the case of NLP tasks like this, I am not sure what a scalable workflow looks like.</li>
+    </ol>
+  </li>
+  <li>I am considering building a small web app, in order to test this. I want to try this on myself first, and make it available for other who would like to try as well. Would I actually improve my French? Will I, at the very least, master 80% of the words? (I know how to form the sentences, the vocabulary for me is a critical point).</li>
+  <li>Why some years are more vocabulary-rich than others? For the years, after discussing with a couple of friends, it might be due to certain unique events that happened at those years. For example, 2001-2002 was the terrorism events, with new words suddenly becoming more dominant. A similar story can be said about 2020-2021, with the lovely era of covid. I will think about a way to analyze this.</li>
+  <li>In my analysis, I considered both the years and the topics separately. It will be interesting to consider both of them together.</li>
+  <li>Adding more ‘natural’ sources of data: like twitter/reddit/movies &amp; TV-series subtitles. After all, the language LeMonde doesn’t necessarily represent what the language of the normal French person.</li>
+</ol>
+
+<p>If you have some suggestion, comment or a feedback, I would love to know and discuss it :)</p>
+
+  </div><a class="u-url" href="/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">OSM3000</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">OSM3000</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I believe in enhancing human live and creating a better world through engineering and great designs that capture the nature&#39;s beauty, system and patterns.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
