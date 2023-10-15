@@ -2,9 +2,11 @@
 layout: page
 title: My PhD Work
 permalink: /phd-work/
+published: false
+comments: This needs to be heavily revised. The whole concept of the task and style doesn't make much sense to be. There is a need for "lowest common denominator" component.
 ---
 
-**My PhD focus on studying a problem called _styles_ or _personas_, using deep neural networks. You can find the whole manuscript [here](https://www.google.com/url?q=https%3A%2F%2Ftel.archives-ouvertes.fr%2Ftel-02488856%2F&sa=D&sntz=1&usg=AOvVaw3ceDR4XaqtfO4mOVohrkgq). The papers published during this period can be found [here](https://scholar.google.com/citations?user=FpRt65QAAAAJ&hl=en).**
+My PhD focus was on studying a problem called _styles_ or _personas_, using deep neural networks. You can find the whole manuscript [here](https://www.google.com/url?q=https%3A%2F%2Ftel.archives-ouvertes.fr%2Ftel-02488856%2F&sa=D&sntz=1&usg=AOvVaw3ceDR4XaqtfO4mOVohrkgq). The papers published during this period can be found [here](https://scholar.google.com/citations?user=FpRt65QAAAAJ&hl=en).
 
 ## But what is a style anyway?
 
@@ -31,23 +33,21 @@ What is the difference between the two drawing of letter **X** on the left? hmm,
 But what if we look at the pen movement for each letter, something interesting is noticed:
 
 - The writer for the left letter starts from top left, and proceeds to draw the letter counter clockwise.
-- The writer for the left letter starts from top right, and proceeds to draw the letter clockwise.
+- The writer for the right letter starts from top right, and proceeds to draw the letter clockwise.
 
-The is not apparent at all when you look at the final product (i.e., the image of the letter), but once you look the pen sequence, you can see the difference.
+This is not apparent at all when you look at the final product (i.e., the image of the letter), but once you look the pen sequence, you can see the difference.
 
 Question here: would you consider this as a style or not?
 
-The answer is: it depends on what you care about! And this is a big sort of difficulty.
+The answer is: it depends on what you care about! And this is a big difficulty.
 
-The concept of style is ill-defined (it is not always clear what is the task and what is the style), and it differs from one field to another. It also depends on which angle of you are looking from. Let's go back to the writing example.
-
-But in the previous examples, we know the task. We can describe it clearly. But is this always the case? In simple cases, probably yeah, but if you have a complex sequence of behaviour (lets say two people interacting with each other), the set of tasks are diluted and unclear.
+The concept of style is ill-defined (it is not always clear what is the task and what is the style), and it differs from one field to another. It also depends on which angle of you are looking from. Let's go back to the writing example: In the previous examples, we know the task. We can describe it clearly. But is this always the case? In simple cases, probably yeah, but if you have a complex sequence of behavior (lets say two people interacting with each other), the set of tasks are diluted and unclear.
 
 In such realistic scenario, there has to be a heuristic first to divide the sequence into a set of tasks, and then explore the styles of one of those tasks (or at least some of them). We can consider those as _local styles_.
 
 There could be also some _global styles_ (high tone of voice for example, defensive or offensive attitude,....etc).
 
-_**We will not handle these cases during the PhD though. We will always work within a well-defined task.**_
+_**I did not handle these cases during the PhD though. I always worked within a well-defined task definition.**_
 
 ## Why studying styles? what is the final objective?
 
@@ -55,7 +55,7 @@ _**We will not handle these cases during the PhD though. We will always work wit
 
 iCub robot, Nina (GIPSA Lab)
 
-Our long-term objective is to enable our humanoid iCub robot [Nina](http://www.google.com/url?q=http%3A%2F%2Fwww.gipsa-lab.grenoble-inp.fr%2Fprojet%2FNINA%2Fhome.html&sa=D&sntz=1&usg=AOvVaw2AbeaZXRmBb_5LP-zpUBHj), to have a exhibit personalized behavior suitable for the person interacting with it. This will enhance the user experience, and will allow for a more natural interaction with the robot.
+Our long-term objective is to enable our humanoid iCub robot [Nina](http://www.google.com/url?q=http%3A%2F%2Fwww.gipsa-lab.grenoble-inp.fr%2Fprojet%2FNINA%2Fhome.html&sa=D&sntz=1&usg=AOvVaw2AbeaZXRmBb_5LP-zpUBHj) to exhibit personalized behavior suitable for the person interacting with it. This will enhance the user experience, and will allow for a more natural interaction with the robot.
 
 At the moment, we successfully used machine learning approaches in order to build models of human-robot interaction. However, when using these models to generate behaviors, this behavior usually represents an average over the learned behaviors (which is expected).
 

@@ -1,144 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-14T21:53:24+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OSM3000</title><subtitle>I believe in enhancing human live and creating a better world through engineering and great designs that capture the nature&apos;s beauty, system and patterns.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2023/10/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-10-14T18:57:32+02:00</published><updated>2023-10-14T18:57:32+02:00</updated><id>http://localhost:4000/jekyll/update/2023/10/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/10/14/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">French Journey - Part 3</title><link href="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html" rel="alternate" type="text/html" title="French Journey - Part 3" /><published>2023-09-24T00:00:00+02:00</published><updated>2023-09-24T00:00:00+02:00</updated><id>http://localhost:4000/thinking/2023/09/24/french-journey-part-3</id><content type="html" xml:base="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html"><![CDATA[<ul>
-  <li>
-    <p><a href="http://osm3000.wordpress.com/2022/02/16/a-view-on-france-part-1/">Part 1</a></p>
-  </li>
-  <li>
-    <p><a href="http://osm3000.wordpress.com/2022/08/19/a-view-on-france-part-2-data-driven-estimation-to-learn-french/">Part 2</a></p>
-  </li>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-15T13:55:15+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OSM3000</title><subtitle>I believe in enhancing human live and creating a better world through engineering and great designs that capture the nature&apos;s beauty, system and patterns.</subtitle><entry><title type="html">French Journey - Part 3</title><link href="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html" rel="alternate" type="text/html" title="French Journey - Part 3" /><published>2023-09-24T00:00:00+02:00</published><updated>2023-09-24T00:00:00+02:00</updated><id>http://localhost:4000/thinking/2023/09/24/french-journey-part-3</id><content type="html" xml:base="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html"><![CDATA[<ul>
+  <li><a href="/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html">Part 1</a></li>
+  <li><a href="/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html">Part 2</a></li>
 </ul>
 
 <p>This whole journey started out for very different objectives (analyzing the political scene in France), and then it progressed forward, out of curiosity.</p>
 
-<p>In parts <a href="https://osm3000.wordpress.com/2022/02/16/a-view-on-france-part-1/">1</a> and <a href="https://osm3000.wordpress.com/2022/08/19/a-view-on-france-part-2-data-driven-estimation-to-learn-french/">2</a>, I presented preliminary results of the results of the analysis of nearly 1.5 million articles from <a href="http://www.lemonde.fr">LeMonde</a>, and <em>I extracted the most frequently used 80% of French words, which was nearly 2600 words</em>. I came to realize that it might be useful to solve my problem in learning French.</p>
+<p>In the previous parts, I presented preliminary results of the results of the analysis of nearly 1.5 million articles from <a href="http://www.lemonde.fr">LeMonde</a>, and <em>I extracted the most frequently used 80% of French words, which was nearly 2600 words</em>. I came to realize that it might be useful to solve my problem in learning French.</p>
 
-<p>The main difficulty in such situations is to design a process to distill these desires and assets into clear requirements, using available tools, to produce actionable habits. This is often a non-linear phase. After that comes the assembly part: acquire (or build) all these pieces and put them together. Then, reality check: let’s use it for a while. Iterating (minor or major) is the name of the game: the faster, the better. And through all of this, there is a deep imposter syndrome and flying demons everywhere.</p>
+<p>The main difficulty in such situations is to design a process to distill these desires and assets into clear requirements, using available tools, in order to produce actionable habits. This is often a non-linear phase. After that comes the assembly part: acquire (or build) all these pieces and put them together. Then, reality check: let’s use it for a while. Iterations and feedbacks are the keys of the game: the faster, the better. And through all of this, there is a deep imposter syndrome and flying demons everywhere.</p>
 
 <p>To learn French using my previous findings, my initial thoughts were:</p>
-
 <ol>
-  <li>
-    <p>Memorize the single words using flashcards</p>
-  </li>
-  <li>
-    <p>Learn in context:</p>
+  <li>Memorize the individual words using flashcards</li>
+  <li>Learn in context:
     <ol>
-      <li>
-        <p>(Passive) Reading: I unleashed an optimization system to find the best set of articles from LeMonde, which allowed me to see every word in context at least 10 times. This mounted to 400 articles.</p>
-      </li>
-      <li>
-        <p>(Active) Writing: Similar to reading, the objective was to deliberately write sentences/paragraphs that will lead to ~10 times repetition of each word.</p>
-      </li>
+      <li>(Passive) Reading: I used an optimization system to find the best set of articles from LeMonde, that would allow me to see every one of those selected words, in context, at least 10 times. This resulted in a set of ~400 articles.</li>
+      <li>(Active) Writing: Similar to reading, the objective was to deliberately write sentences/paragraphs that will lead to ~10 times repetition of each word.</li>
     </ol>
   </li>
 </ol>
 
-<p>This article is to describe my experience so far. Once all the pieces were in place, I gave myself 2 months to try it all on daily bases.</p>
+<p>This article describes my experience so far. Once all the pieces were in place, I gave myself 2 months to try them all on daily bases.</p>
 
-<p>Before we start, it is important to give on the context on why my motives, and the challenges I faced that drove me there:</p>
-
+<p>Before we start, I think it is important to give on the context on why my motives, and the challenges I faced that drove me there:</p>
 <ol>
   <li>I would love to learn French
     <ol>
-      <li>
-        <p>To get better at integrating with the society</p>
-      </li>
-      <li>
-        <p>Out of sheer curiosity: to unlock this massive culture</p>
-      </li>
-      <li>
-        <p>Being accustomed to ignorance is contagious to other aspects of life</p>
-      </li>
+      <li>To get better at integrating with the society</li>
+      <li>To unlock this the doors for this massive culture</li>
+      <li>Because I believe that being accustomed to ignorance is contagious to other aspects of life</li>
     </ol>
   </li>
-  <li>Despite many attempts, I could not find a suitable course: either it was too expensive, course hours are inconvenient (in the middle of the working hours), or unsuitable medium (I really didn’t like courses over zoom).
-    <ol>
-      <li>With no course, there is no curriculum / gradual steps
-        <ol>
-          <li>French people don’t make it any easier. The majority of people I interact with speaks very well English, and people will switch to English if they feel you are hesitating or misspelling.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
+  <li>Despite many attempts, I could not find a suitable language course: either it was too expensive, course hours were inconvenient (in the middle of the working hours), or unsuitable medium (I really didn’t like courses over zoom). With no course, there is no curriculum / gradual steps</li>
   <li>I don’t have a natural stress to learn French
     <ol>
-      <li>
-        <p>My work was / is / likely will be in English.</p>
-      </li>
-      <li>
-        <p>All my French friends speak perfect English.</p>
-      </li>
-      <li>
-        <p>A lot of French people speak English just fine.</p>
-      </li>
+      <li>My work was / is / likely will be in English.</li>
+      <li>All my French friends speak perfect English.</li>
+      <li>A lot of French people speak English just fine.</li>
     </ol>
   </li>
-  <li>I don’t watch TV, which is ironic: I thought that was a superior habit, but in this case, it is a massive weakness.</li>
+  <li>I don’t watch TV (which is ironic: I always thought that was a great thing, but in this case, it is a massive weakness).</li>
 </ol>
 
 <p>Simply speaking: It’s a matter of numbers, and I don’t have the proper context to do the numbers.</p>
 
 <h1 id="experience">Experience</h1>
 
-<h2 id="words">Words</h2>
+<h2 id="learning-individual-words">Learning individual words</h2>
 
 <p>I formatted and uploaded all the extracted words and their translations to <a href="https://apps.ankiweb.net/">Anki</a>, a powerful flashcard app. The results were immediate, tangible, and amazing!</p>
 
 <p>At the beginning, I started with learning 100 new words a day, and reviewing 200 more (since I already know many words). As I progressed (after ~700 new words), the rhythm changed to 50 new words and review about 100.</p>
 
-<p>There has been a direct improvement in my conversation and reading skills.</p>
-
-<ul>
-  <li>I am able to use a wider range of vocabulary to express myself and my point of view. When I am stuck, I have a larger toolbox to choose from.</li>
-</ul>
+<p>There has been a direct improvement in my conversation and reading skills: I am able to use a wider range of vocabulary to express myself and my point of view. When I am stuck, I have a larger toolbox to choose from.</p>
 
 <p>The transition from extracted words to flashcards was “almost” seamless:</p>
-
 <ol>
-  <li>One-to-one translation between French and English was sometimes NOT capturing the meaning.
+  <li>One-to-one translation between French and English sometimes didn’t capture the meaning.
     <ol>
-      <li>Many French words map to the same English word, but if you look at the French dictionary, there can be subtle or important differences in meaning.
-        <ol>
-          <li>
-            <p>This required cleaning, consolidation of words, and compromises.</p>
-          </li>
-          <li>
-            <p>This required some time to iron, and I don’t think the resolution was perfect.</p>
-          </li>
-          <li>
-            <p>This point provided clear evidence for the need for more context (phrases / paragraphs).</p>
-          </li>
-        </ol>
-      </li>
+      <li>Many French words map to the same English word, but if you look at the French dictionary, there can be subtle or important differences in meaning.</li>
     </ol>
   </li>
   <li>A few entities (such as some people’s names) have escaped my processing pipeline, which further required cleaning.</li>
 </ol>
 
-<p>After cleaning, approximately 400 words were removed from my word list.</p>
+<p>This required cleaning, consolidation of words, and compromises, which resulted in approximately 400 word entries being removed.</p>
 
-<p>Certain words, such as propositional letters, were challenging to learn and still are. This indicates that a larger context, such as a phrase, may aid in the learning process of these words. More context and modalities (using them in writing, during hearing, …etc) and special focus on them is required.</p>
+<p>Certain words, such as propositional letters, were challenging to learn, and still are. This indicated that a larger context, such as a phrase, and perhaps more modalities (i.e., listening and writing) may help in the learning these words.</p>
 
 <h1 id="next-steps">Next steps</h1>
 
 <h2 id="words-and-reading">Words and Reading</h2>
 
-<p>The next frontier is to solidify these words with reading and writing. For the reading part, a friend tried generating example phrases using ChatGPT for the new words he is learning in german. Naturally, I wanted to try the same.</p>
+<p>The next frontier is to ground these words with reading and writing. For the reading part, a friend tried generating example phrases using ChatGPT for the new words he is learning in german. Naturally, I wanted to try the same.</p>
 
 <p>With simple prompts, I was able to:</p>
 
@@ -175,44 +109,30 @@
 
 <h2 id="writing">Writing</h2>
 
-<p>One of the annoyances I found out about this is to have track what I am writing, and enforce certain objectives.</p>
+<p>One of the annoyances I found out about this is to have a correction/revision for my writing, and to track my objectives.</p>
 
-<p>For example, a process I’ve in mind is to have a list of X words daily, and I need to use them in a writing assignment of 100 words. The objective, similar to flashcards, is to hit each word 10 times at least.</p>
+<p>For example, a process I’ve in mind is to have a list of <code class="language-plaintext highlighter-rouge">X</code> words daily, and I need to use them in a writing assignment of <code class="language-plaintext highlighter-rouge">100</code> words. The objective, similar to flashcards, is to hit each word <code class="language-plaintext highlighter-rouge">10</code> times at least.</p>
 
 <p>A proxy for proper correction (to be investigated) is to use GPT model at the end to generate a correction for my writing, and use this as the ground truth for what I’ve truly practiced.</p>
 
-<p>I will release this app later when it is ready.</p>
+<p>I am still trying different things. We will see how it goes.</p>
 
 <h1 id="final-note">Final note</h1>
 
 <p>This whole project was fun. I learned a lot of new things, and came to appreciate my own limitations on many other things (I will probably write about this separately).</p>
 
-<ul>
-  <li>
-    <p>It is a design problem: Finding the right design to unlock the right functionality. While my design skills are not great, I found the hard way that my execution capacity is not adequate my dreams (my tech stack is geared more towards machine learning, research and backend). This was a motive to improve my design and technical skills.</p>
+<ol>
+  <li>It is a process design problem: Finding the right process to unlock the right functionality. I also found the hard way that my execution capacity was limited, unable to keep up with my design iterations (my experience and tech stack is geared more towards machine learning, research and backend, and not towards user-facing applications and interactions). This was a motive to improve and expand my design and technical skills.</li>
+  <li>There is a deep value in having a progress bar and metrics to track my progress, even if they are noisy. Better still, it is nice to have the “one number” that summarize your progress. After that, you can have other numbers that shed light on different aspects of that progress.</li>
+  <li>While perseverance is the key to progress forward, and I am already enjoying the mix of road building and exploration that I am doing: I think a key item is to <em>find a manageable objective</em>. Conversing fluently in French (my objective since forever) is unrealistic in the absence of full immersion, and immersion will not happen without a need or a stress, interior or exterior. But a limited immersion seems feasible (and personally interesting):
+    <ol>
+      <li>Reading: I love magazines (space, cars, tech), history, and eager to explore literature (Jules Verne in French? Let’s go!).</li>
+      <li>Watching / Listening: I like documentaries in different subjects (<a href="https://www.arte.tv">ARTE</a> comes to mind).</li>
+      <li>Writing small nuggets daily (~100 words or so), maybe focusing on using certain words, seems doable.</li>
+    </ol>
   </li>
-  <li>
-    <p>There is a deep value in having a progress bar and metrics to track my progress, even if they are noisy.<br />
-  Better still, it is nice to have the “one number” that summarize your progress. After that, you can have other numbers that shed light on different aspects of that progress.</p>
-  </li>
-  <li>While practice and perseverance are the key, and I am already enjoying the mix of road building and exploration that I am doing, I think a key item is to find a manageable objective: Speaking french fluently (my objective since long) is unrealistic in the absence of full immersion, and immersion will not happen without a need or a stress, interior or exterior.<br />
-  But a limited immersion seems feasible (and personally interesting):
-    <ul>
-      <li>
-        <p>Reading: I love magazines (space, cars, tech), history, and eager to explore literature (Jules Verne in French? Let’s go!).</p>
-      </li>
-      <li>
-        <p>Watching / Listening: I like documentaries in different subjects (<a href="https://www.arte.tv">ARTE</a> come to mind).</p>
-      </li>
-      <li>
-        <p>Writing small nuggets daily (~100 words or so), maybe focusing on using certain words, seems doable.</p>
-      </li>
-    </ul>
-  </li>
-  <li>Speaking is still a challenge, but my hypothesis is: if I managed the other three, then when the opportunity comes to immerse, I will be better prepared.</li>
-</ul>
-
-<p>To be continued…</p>]]></content><author><name></name></author><category term="thinking" /><summary type="html"><![CDATA[Part 1]]></summary></entry><entry><title type="html">Debunking the Myths of the HBO Chernobyl series</title><link href="http://localhost:4000/investigation/2023/01/05/hbo-chernobyl-myth.html" rel="alternate" type="text/html" title="Debunking the Myths of the HBO Chernobyl series" /><published>2023-01-05T23:00:00+01:00</published><updated>2023-01-05T23:00:00+01:00</updated><id>http://localhost:4000/investigation/2023/01/05/hbo-chernobyl-myth</id><content type="html" xml:base="http://localhost:4000/investigation/2023/01/05/hbo-chernobyl-myth.html"><![CDATA[<p>When I was a child, around 5-9 years old, I came across a story in the <em>Reader’s Digest</em> magazine (<em>El-Mokhtar</em> in its Arabic version) about the Chernobyl disaster.</p>
+  <li>Conversation is still a challenge (particularly: hearing), but my hypothesis is: if I managed the other three, then when the opportunity comes to immerse, I will be better prepared.</li>
+</ol>]]></content><author><name></name></author><category term="thinking" /><summary type="html"><![CDATA[Part 1 Part 2]]></summary></entry><entry><title type="html">Debunking the Myths of the HBO Chernobyl series</title><link href="http://localhost:4000/investigation/2023/01/05/hbo-chernobyl-myth.html" rel="alternate" type="text/html" title="Debunking the Myths of the HBO Chernobyl series" /><published>2023-01-05T23:00:00+01:00</published><updated>2023-01-05T23:00:00+01:00</updated><id>http://localhost:4000/investigation/2023/01/05/hbo-chernobyl-myth</id><content type="html" xml:base="http://localhost:4000/investigation/2023/01/05/hbo-chernobyl-myth.html"><![CDATA[<p>When I was a child, around 5-9 years old, I came across a story in the <em>Reader’s Digest</em> magazine (<em>El-Mokhtar</em> in its Arabic version) about the Chernobyl disaster.</p>
 
 <p>It was about Anatoly Grishchenko, a Soviet helicopter pilot who had served in Chernobyl and, like many others, had developed cancer as a result. An incredible act of kindness and empathy from pilots in the United States saw them arrange for Grishchenko to come to the US to receive treatment, yet sadly he did not survive.<br />
 (I could not find the original article, but here is <a href="https://www.latimes.com/archives/la-xpm-1990-07-04-mn-106-story.html">another article from that time</a>).</p>
