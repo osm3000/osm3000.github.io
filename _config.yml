@@ -21,7 +21,7 @@
 title: OSM3000
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I believe in enhancing human live and creating a better world through engineering and great designs that capture the nature's beauty, system and patterns.
+  I wonder the world admiring the beauty of design, nature, systems and patterns...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: osm3000
