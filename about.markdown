@@ -4,17 +4,17 @@ title: About
 permalink: /about/
 ---
 
-[![](https://osm3000.files.wordpress.com/2022/04/personal.jpg?w=1024)](https://osm3000.files.wordpress.com/2022/04/personal.jpg)
+<!-- [![](https://osm3000.files.wordpress.com/2022/04/personal.jpg?w=1024)](https://osm3000.files.wordpress.com/2022/04/personal.jpg) -->
 
 I am interested in machine learning, DIY electronics and 3D printing, and simulations.
 
-I get my PhD in 2019, from the University of Grenoble-Alpes (France). My work is focused on using machine learning (mostly deep learning) to model, extract and transfer styles/personas.
+I got my PhD in 2019, from the University of Grenoble-Alpes (France). My work is focused on using machine learning (mostly deep learning) to model, extract and transfer styles/personas.
 
-I have a MSc degree in Machine Learning and Data Mining in 2016.
+I had a MSc degree in Machine Learning and Data Mining in 2016.
 
 I had my engineering degree (BSc) from Faculty of Engineering, Alexandria University, Egypt, specialized in electronics and communications.
 
-In high school (equivalent to Classe préparatoire in France), I was ranked 120 over almost half a million student nation wide in Egypt, specialized in science (mathematics branch).
+In high school (equivalent to *Classe préparatoire* in France), I was ranked 120 over almost half a million student nation wide in Egypt, specialized in science (mathematics branch).
 
 # Boring background :-D
 
