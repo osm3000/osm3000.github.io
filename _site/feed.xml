@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-15T14:07:33+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">OSM3000</title><subtitle>I believe in enhancing human live and creating a better world through engineering and great designs that capture the nature&apos;s beauty, system and patterns.</subtitle><entry><title type="html">French Journey - Part 3</title><link href="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html" rel="alternate" type="text/html" title="French Journey - Part 3" /><published>2023-09-24T00:00:00+02:00</published><updated>2023-09-24T00:00:00+02:00</updated><id>http://localhost:4000/thinking/2023/09/24/french-journey-part-3</id><content type="html" xml:base="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-30T07:20:03+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Open Tech</title><subtitle>I wonder the world seeking the beauty in systems and patterns, natural or manmade...</subtitle><entry><title type="html">Reflections on Programming</title><link href="http://localhost:4000/thinking/2023/10/27/novice-mistakes.html" rel="alternate" type="text/html" title="Reflections on Programming" /><published>2023-10-27T00:00:00+02:00</published><updated>2023-10-27T00:00:00+02:00</updated><id>http://localhost:4000/thinking/2023/10/27/novice-mistakes</id><content type="html" xml:base="http://localhost:4000/thinking/2023/10/27/novice-mistakes.html"><![CDATA[<p>There is a deep love that is hard to understand or express: the simplicity and purity of the relationship, sound of keyboard, the feeling of control, the gratification of the outcome, the challenge of the puzzle, the room for improvement, the patience of the machine…</p>
+
+<p>I have been programming for more than 20 years, and I still feel like a novice. I still feel like I am learning the basics. I still feel like I am learning how to learn. I still feel like I am learning how to think.</p>
+
+<p>This is merely a reflection on an activity I deeply love and cherish.</p>
+
+<h2 id="young-dreams----2003">Young dreams (? - 2003)</h2>
+<p>I was dreaming about coding. I really liked the idea of having a conversation with the machine: It felt like a mix of gratification of control, and the honesty of the feedback. I was reading stories about hackers and programmers, but it felt very unclear how to reach that, or where to start.</p>
+
+<h2 id="troublesome-beginnings-2003---2008">Troublesome beginnings (2003 - 2008)</h2>
+<p>I managed to put my hands on a arabic book on <code class="language-plaintext highlighter-rouge">Visual Basic 6</code>, which was really exciting. But,…where is visual basic exactly? 
+I was already pretty good with Microsoft word at that time. Unfortunately, it was offering some sort of <code class="language-plaintext highlighter-rouge">visual basic</code> macros - if my memory serves me right -. For a while, I thought this is where Visual Basic is. I tried a lot to make it work, but it didn’t. I was very disappointed.</p>
+
+<p>It is important to understand the context here: I couldn’t read in English back then. The resources in Arabic was really scarce. There was no community or anyone to talk to. I was new to the internet, but what can be done with the internet was still work in progress. There were no libraries you just go to in order to buy book.</p>
+
+<p>Then, a breakthrough happened in 2003: a colleague in my class happened to have been programming for a while (the first and last person I meet during my school years who did any programming). He gave me a copy of <code class="language-plaintext highlighter-rouge">Microsoft Visual Studio 6</code>, and Voila!! I was in.
+But with this amazing gift came a bad curse: he advised me to change to <code class="language-plaintext highlighter-rouge">C++</code> instead, since it is a much more powerful language. And I didn’t waste any time: I set sail to <code class="language-plaintext highlighter-rouge">C++</code>.</p>
+
+<p>One of the first books I picked was <code class="language-plaintext highlighter-rouge">C++ in 21 days</code>. I decided that English is the way to go. I spent over 6 months, progressing 1 page a day, translating word by word, just to realize that the sentence doesn’t mean much to me. My dad also believed in using a traditional dictionary instead of an electronic one, which made the process even more painful. I was really struggling, but I was determined to make it work. And it worked.</p>
+
+<p>I also found a couple of other books in arabic. One book, the deeply touched me, was for a Saudi engineer (I can’t for the life of me find any traces of him). At that time, pirated books was the only available way. However, that guy put his book online for free, and asked that if you like his book, to buy it. It was such a revolutionary idea, I was really touched by it. I never knew how to buy the book though. I would still love to buy it.</p>
+
+<p>With English unlocked, and these few precious arabic resources, rapid progress was made: I could do all the basic things in <code class="language-plaintext highlighter-rouge">C++</code>. I can’t count how many times I built a calculator.</p>
+
+<p>But then what? Here was the curse. I actually didn’t know what to do. My fantasies when I started programming was hacking mainly and building games. Now, what do I do with that syntax?
+The road to making simple games was probably more feasible with <code class="language-plaintext highlighter-rouge">Visual Basic</code>, but the wall was pretty damn high with <code class="language-plaintext highlighter-rouge">C++</code> (I didn’t realize it that time). 
+My solution was: study more books about <code class="language-plaintext highlighter-rouge">C++</code>. Not very long after, my advance has stagnated, and I was stuck.</p>
+
+<h2 id="the-first-breakthrough-2008---2010">The first breakthrough (2008 - 2010)</h2>
+<p>I took an electronics course in the summer of 2008, where we learned to program micro-controllers. I was already familiar with the <code class="language-plaintext highlighter-rouge">C</code> language, which made this part of the course easy for me, but most importantly, it gave me a meaning: I can write a piece of code that will turn a LED on and off! It was a crazy powerful idea! I can…do things! And it was not far fetched to imagine doing useful things to me.</p>
+
+<p>After that course, I built a lot of small programs for micro-controllers, went for multiple large projects (robots mainly). It was fun and painful in the same time Working with micro-controllers means working with hardware, which is a tough cookie though: it is expensive, and debugging is hard. But it was a lot of fun.</p>
+
+<p>I took a course on <code class="language-plaintext highlighter-rouge">assembly</code> for <code class="language-plaintext highlighter-rouge">x86</code> back then, which was oddly satisfying. It did reinforce a certain idea that was building up: I like working close to the metal. High levels of abstraction didn’t appeal to me that much.</p>
+
+<h2 id="the-second-breakthrough-2011---2013">The second breakthrough (2011 - 2013)</h2>
+<p>Necessity dictated that I put an end to my projects with micro-controllers:</p>
+
+<ul>
+  <li>They were expensive, and I personally couldn’t afford the electronics part</li>
+  <li>I loved mixing electronics was mechanics, which was far more expensive and complex.
+    <ul>
+      <li>I was already suffering from multiple failures in orchestrating projects with people from mechanical engineering.</li>
+    </ul>
+  </li>
+  <li>There were barely any electronics in Egypt: sensors, motors, wireless modules, etc. were very hard, if not completely unavailable, to find.</li>
+  <li>A multimeter will only get you so far. Without access to an oscilloscope, debugging was a nightmare.</li>
+</ul>
+
+<p>It was survival time. Thanks to the strategic insight from a dear friend (Moustafa Kassem), we started working on a project on FPGA. I shifted to <code class="language-plaintext highlighter-rouge">Verilog</code>, which is a language to describe hardware elements and the connections between them. The beauty of the setup at the time was that it removed all complex elements: access to hardware wasn’t required for the vast majority of the time, and simulators would do just fine.</p>
+
+<p>I loved <code class="language-plaintext highlighter-rouge">verilog</code>, the setup, everything related to computer architecture, but the projects were not fun at all. They were…the right and responsible thing to do. I tried to find fun in pockets inside the projects (architecture, module design, code quality, etc.), but it was not the same. My heart was not in it.</p>
+
+<p>One interesting thing during those years is that I still didn’t understand most of the concepts that student in computer engineering were taught in programming courses. For me, everything was a <code class="language-plaintext highlighter-rouge">Finite State Machine</code>.</p>
+
+<p>Doing the right things though paid off very well: I got a couple of very lucrative jobs offers before I graduated.</p>
+
+<p>My work in Siemens was a continuation of these projects. It was stimulating to see high quality code and patterns from more experienced engineers. I learned a lot.</p>
+
+<p>But then, I stumbled upon this weird language: <code class="language-plaintext highlighter-rouge">Perl</code>, which was used to build parsers, as part of our verification environment. I damn loved <code class="language-plaintext highlighter-rouge">Perl</code> and <code class="language-plaintext highlighter-rouge">regular expressions</code>. I read a couple of books, did so many small programs. I was pretty good at reading all this alien-like notations.</p>
+
+<p>But, most importantly, I had use-cases: automating parts of my work.</p>
+
+<p>For example, when we run the regressions test-cases, we needed to fill an excel sheet with the results of each test-case. And boy I sucked at this! So, I wrote a script that would parse the log files, and fill the excel sheet for me, with colors and stats and everything. It was amazing! I was hooked.
+I built a system to generate more complex test-cases (back then, we were writing the test-cases manually, following an agreed upon verification plan). Found 3 critical bugs before the release. Neat! The project manager was very happy, and he presented it to the department director. It was awesome!</p>
+
+<p><code class="language-plaintext highlighter-rouge">Perl</code> was just the right level of abstraction, in the right time, with the right problems. I love it to this day.</p>
+
+<p>My love for <code class="language-plaintext highlighter-rouge">verilog</code> fading away. I always wanted to build a microprocessor. I found that book about a demonstration processor called <code class="language-plaintext highlighter-rouge">Vespa</code></p>
+
+<p>Back then, I read a couple of books that had a great impact on me:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Automate this: How algorithms came to rule our world</code></li>
+  <li><code class="language-plaintext highlighter-rouge">The Age of Spiritual Machines: When Computers Exceed Human Intelligence</code></li>
+</ul>
+
+<p>This encouraged me to do <em>Andrew Ng</em>’s famous course on <em>Machine Learning</em></p>
+
+<h2 id="hard-reset-2014">Hard reset (2014)</h2>
+<p>I started a MSc in embedded systems in Switzerland, but two months in, it was clear that my heart and mind is in Artificial Intelligence. I applied for another MSc in France, in ML, got accepted.
+There were ~6 months until I started the MSc. Since I don’t come from a CS background, and my math (statistics in particular) wasn’t up to the task, I decided to take the time to invest in online courses, address my weak points, and prepare for the MSc.</p>
+
+<p>One course in particular I tried to do many times a year earlier, and failed consistently, was Algorithms course from Stanford. Every time I made an excuse: I was too busy, the stars were not aligned, …etc.
+This time, I was adamant to get it right. I even blamed the course itself.
+So, a similar course, but from Princeton, was starting. I was determined to get it right this time. First week was brutal, I struggled a lot. Second week, I was working day and night, I simply couldn’t finish.</p>
+
+<p>There was this shocking realization that…I am not good at programming in the first place.</p>]]></content><author><name></name></author><category term="thinking" /><summary type="html"><![CDATA[There is a deep love that is hard to understand or express: the simplicity and purity of the relationship, sound of keyboard, the feeling of control, the gratification of the outcome, the challenge of the puzzle, the room for improvement, the patience of the machine…]]></summary></entry><entry><title type="html">Evolutionary Algorithms for Games - Part 1</title><link href="http://localhost:4000/thinking/2023/10/27/ea.html" rel="alternate" type="text/html" title="Evolutionary Algorithms for Games - Part 1" /><published>2023-10-27T00:00:00+02:00</published><updated>2023-10-27T00:00:00+02:00</updated><id>http://localhost:4000/thinking/2023/10/27/ea</id><content type="html" xml:base="http://localhost:4000/thinking/2023/10/27/ea.html"><![CDATA[<p>This is the start of a diary to record my work and progress in this</p>]]></content><author><name></name></author><category term="thinking" /><category term="evolutionary algorithms" /><category term="games" /><summary type="html"><![CDATA[This is the start of a diary to record my work and progress in this]]></summary></entry><entry><title type="html">French Journey - Part 3</title><link href="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html" rel="alternate" type="text/html" title="French Journey - Part 3" /><published>2023-09-24T00:00:00+02:00</published><updated>2023-09-24T00:00:00+02:00</updated><id>http://localhost:4000/thinking/2023/09/24/french-journey-part-3</id><content type="html" xml:base="http://localhost:4000/thinking/2023/09/24/french-journey-part-3.html"><![CDATA[<ul>
   <li><a href="/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html">Part 1</a></li>
   <li><a href="/data-science/machine-learning/nlp/2022/08/19/french-journey-part-2.html">Part 2</a></li>
 </ul>
@@ -1078,20 +1164,4 @@ Image captions figure &gt; figcaption - &lt;No class name&gt;
 
 <p>So, think about first make designs that will enhance yourself, make your life much easier. There are always problems to be solved. Think small and grow bigger. I shall talk more about that in later posts.</p>
 
-<p>And lastly, I want to say: Smile, be cheerful, think positively and always seek the good for you and for the others :)</p>]]></content><author><name></name></author><category term="thinking" /><summary type="html"><![CDATA[(A slightly modified version of the original post)]]></summary></entry><entry><title type="html">The beauty of design</title><link href="http://localhost:4000/thinking/2012/11/06/beauty-of-design.html" rel="alternate" type="text/html" title="The beauty of design" /><published>2012-11-06T23:00:00+01:00</published><updated>2012-11-06T23:00:00+01:00</updated><id>http://localhost:4000/thinking/2012/11/06/beauty-of-design</id><content type="html" xml:base="http://localhost:4000/thinking/2012/11/06/beauty-of-design.html"><![CDATA[<p>(A slightly modified version of the original post)</p>
-
-<p>Let’s face it. We’ve two directions controlling the world of most of engineers: either people who believe in logic only, or people believe they have chosen the wrong craft.</p>
-
-<p>I’m not a veteran engineer. But I can tell you that there is something more than logic, science or math in engineering.</p>
-
-<p>Design is about tasting the beauty of the nature, seeking the patterns and the great system the determines its behavior, then using your “taste” to make the engineering solution you’re seeking. Equations and logic are just a part of the equation. </p>
-
-<p>You’ll probably tell me: For god sake, how can I understand nature? </p>
-
-<p>I didn’t ask you to understand. This is not right. This is like trying to see the frequency component of the signal in time domain.</p>
-
-<p>I’m asking you to taste. Nature is about feeling.</p>
-
-<p>Try to walk alone. See the beauty of God’s creating around you. Look at the flower, look at closely, see the colors, the curves, the whole great design and system that this design has been based on. Look at the sky. Imagine those incredible planets there, with all their magnificent details and colors, every planet is a system of its own, and under every system there are many systems: The weather, the land, the gravity, …etc. And all these planets are united in one system of our solar system, moving in an breath-taking system, so precise and beautiful.</p>
-
-<p>Seek the beauty and elegance in your design. Seek all the details, even the minor ones. Everything matters. Everything counts.</p>]]></content><author><name></name></author><category term="thinking" /><summary type="html"><![CDATA[(A slightly modified version of the original post)]]></summary></entry></feed>
+<p>And lastly, I want to say: Smile, be cheerful, think positively and always seek the good for you and for the others :)</p>]]></content><author><name></name></author><category term="thinking" /><summary type="html"><![CDATA[(A slightly modified version of the original post)]]></summary></entry></feed>
