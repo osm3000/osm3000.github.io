@@ -18,4 +18,4 @@ I can't count how many times we have been through this: There should be one pers
 
 It is strange but, nothing of what OpenAI mentioned was new. We all knew what needed to be done, and most of it could have been done without OpenAI (except the model improvements perhaps), yet, no one did it. Not even OpenAI competitors.
 
-I realize that maybe an emotional rant, and probably reality is a bit different than what I am describing, but I don't think I missed reality by a lot.
+I realize that this maybe an emotional rant, and probably reality is a bit different than what I am describing, but I don't think I missed reality by a lot.
