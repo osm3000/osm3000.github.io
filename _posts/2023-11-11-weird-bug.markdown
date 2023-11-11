@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "Weird issue with multiprocessing in python...at scale"
+date:   2023-11-11 00:00:00 +0200
+categories: thinking
+tags: [programming, bug]
+---
+
+For several weeks now, my work in the tank-evolution problem has been stagnating. A big reason for this was the a bug that happened after nearly ~1800*32 evaluation times. The bug is still unknown, but the whole thing just freezes.
+
+The game is simple: there are two tanks. If one of them shoots the other, the game is won. Both tanks has the same brain. The brain is a neural network that takes the state of the game as input (right now, it is take the position of the both tanks - for simplicity), and outputs the action to take (move forward, fire...etc). The brain is trained using evolutionary algorithms.
+
+To describe what happens, there class holding the problem: evaluate the quality of a solution (in this case, a neural network that represent the tank policy), by playing 32 games (the number of cores I've available), and measure the average score. The 32 games are played in parallel, thanks to the `multiprocessing` library in python. 
+
+The problem is that after a while, the whole thing just freezes. The 32 processes are still running, but they are not doing anything. The CPU usage is idle. The memory usage is idle. The processes are still alive, but they are not doing anything. They are just stuck.
+
+The parallel loop exists inside the class, something like this:
+
+```python
+class Problem:
+    def evaluate(self, solution):
+        # ...
+        with multiprocessing.Pool(processes=32) as pool:
+            results = pool.map(worker, range(32))
+        # ...
+```
+
+where the `worker` is basically a game run. 
+
+This kind of problems is probably the most annoying kind: a ghost in the wires.
+
+At the beginning, I thought it was an issue with `pygmo` optimization library. I built a small library from scratch, with a couple of algorithms, benchmarked them, and then used it instead. The problem persisted.
+
+I tried to use a `signal` to kill the processes after a certain time, but the problem persisted.
+
+I then accidentally moved the `with multiprocessing.Pool(processes=32) as pool` part outside the class, and the problem disappeared. I thought it was a coincidence, but it wasn't. The problem was gone.
+
+Why is that?
+
+After asking chatgpt, it seems that the use of the `multiprocessing` library inside a class implies that the class will have to pickled and unpickled. The pickled class is passed to the new processes. This can lead to unexpected behavior or even deadlocks if the class contains state that cannot be pickled or if it has side effects when pickled and unpickled.
+
+By moving the `multiprocessing` part outside the class, there is no need to pickle the class, and the problem is gone.
+
+According to ChatGPT, to avoid pickling issues in python, the advice is:
+1. Use top-level functions: Functions that are defined at the top level of a module are easier to pickle and unpickle. Avoid using lambda functions or functions defined inside other functions or methods.
+2. Avoid non-picklable objects: Some objects cannot be pickled, including open file or network connections, threads, processes, stack frames, deeply recursive classes, and others. If you need to share such objects between processes, consider using a server process or file-based sharing.
+
+...I hope this is right.

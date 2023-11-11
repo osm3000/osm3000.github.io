@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Thoughts on management, from the recent OpenAI announcement"
-date:   2023-10-27 00:00:00 +0200
+date:   2023-11-08 00:00:00 +0200
 categories: thinking
 tags: [reflection]
 ---
