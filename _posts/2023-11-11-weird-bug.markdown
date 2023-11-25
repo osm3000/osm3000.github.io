@@ -2,21 +2,28 @@
 layout: post
 title:  "Weird issue with multiprocessing in python...at scale"
 date:   2023-11-11 00:00:00 +0200
-categories: thinking
-tags: [programming, bug]
+categories: experiments
+tags: [programming, bug, evolutionary algorithms]
 ---
 
-For several weeks now, my work in the tank-evolution problem has been stagnating. A big reason for this was the a bug that happened after nearly ~1800*32 evaluation times. The bug is still unknown, but the whole thing just freezes.
+# Context
 
-The game is simple: there are two tanks. If one of them shoots the other, the game is won. Both tanks has the same brain. The brain is a neural network that takes the state of the game as input (right now, it is take the position of the both tanks - for simplicity), and outputs the action to take (move forward, fire...etc). The brain is trained using evolutionary algorithms.
+For several weeks now, I've been working on building a simple game, to test ideas and emergent behaviors from agents learning playing a game. The learning is done by either evolutionary algorithms (the current status) or probably later down the road, reinforcement learning.
 
-To describe what happens, there class holding the problem: evaluate the quality of a solution (in this case, a neural network that represent the tank policy), by playing 32 games (the number of cores I've available), and measure the average score. The 32 games are played in parallel, thanks to the `multiprocessing` library in python. 
+My stack is simple: `python-arcade` for the game development, `pygmo` for the evolutionary algorithms, and `pytorch` for the neural networks.
 
-The problem is that after a while, the whole thing just freezes. The 32 processes are still running, but they are not doing anything. The CPU usage is idle. The memory usage is idle. The processes are still alive, but they are not doing anything. They are just stuck.
+The first game is a proof of concept: two agents, one of them has to shoot the other. Each agent is controlled by a neural network, and the neural network is trained using evolutionary algorithms. Both agents use the same neural network. For the sake of simplicity, the neural network takes as input the position of both agents, and outputs the action to take (move forward, fire...etc).
 
-The parallel loop exists inside the class, something like this:
+# The problem
+
+For several weeks now, there was a stagnation in my progress. A big reason for this was the a problem that happened after nearly ~1800*32 evaluation times: the optimization program just freezes.
+
+To describe what happens, there is class holding the problem: evaluate the quality of a solution (in this case, a neural network that represent the tank policy), by playing 32 games (the number of cores I've available), and measure the average score. The 32 games are played in parallel, thanks to the `multiprocessing` library in python. 
+
+The parallel evaluation exists inside the class, something like this:
 
 ```python
+# A snipped from the problem class
 class Problem:
     def evaluate(self, solution):
         # ...
@@ -24,20 +31,21 @@ class Problem:
             results = pool.map(worker, range(32))
         # ...
 ```
-
 where the `worker` is basically a game run. 
 
-This kind of problems is probably the most annoying kind: a ghost in the wires.
+The issue is that after a while, the whole thing just freezes. The 32 processes are still running, but they are not doing anything. The CPU usage is idle. The memory usage is idle. The processes are still alive, but they are not doing anything. They are just stuck.
 
-At the beginning, I thought it was an issue with `pygmo` optimization library. I built a small library from scratch, with a couple of algorithms, benchmarked them, and then used it instead. The problem persisted.
+This kind of problems is probably the most annoying kind: a ghost in the wires. There are no traces that I can find of why there is a problem, and it is difficult to reproduce.
+
+Without better information, I went through a process of elimination: I started with the `pygmo` optimization library. So, I built a small optimization library from scratch, with a couple of algorithms, benchmarked them, and then used it instead. Yet, the problem persisted.
 
 I tried to use a `signal` to kill the processes after a certain time, but the problem persisted.
 
-I then accidentally moved the `with multiprocessing.Pool(processes=32) as pool` part outside the class, and the problem disappeared. I thought it was a coincidence, but it wasn't. The problem was gone.
+*I then accidentally moved the `with multiprocessing.Pool(processes=32) as pool` part outside the class, and the problem disappeared. I thought it was a coincidence, but it wasn't. The problem was gone.*
 
-Why is that?
+# Why is that?
 
-After asking chatgpt, it seems that the use of the `multiprocessing` library inside a class implies that the class will have to pickled and unpickled. The pickled class is passed to the new processes. This can lead to unexpected behavior or even deadlocks if the class contains state that cannot be pickled or if it has side effects when pickled and unpickled.
+After asking chatgpt, it seems that the use of the `multiprocessing` library inside a class implies that the class will have to pickled and unpickled. The pickled class is passed to the new processes. This can lead to unexpected behavior or even deadlocks if the class state cannot be pickled or if it has side effects when pickled and unpickled.
 
 By moving the `multiprocessing` part outside the class, there is no need to pickle the class, and the problem is gone.
 
