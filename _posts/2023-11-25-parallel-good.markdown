@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Parallel is not always good"
-date:   2023-11-11 00:00:00 +0200
+date:   2023-11-25 00:00:00 +0200
 categories: experiments
 tags: [programming, bug, evolutionary algorithms]
 ---
