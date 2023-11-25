@@ -3,6 +3,7 @@ layout: post
 title:  "Reflections on learning programming"
 date:   2023-10-27 00:00:00 +0200
 categories: thinking
+tags: [programming, reflection]
 published: true
 ---
 
