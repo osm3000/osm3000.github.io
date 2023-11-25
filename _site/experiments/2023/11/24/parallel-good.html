@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Parallel is not always good | Open Tech</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Parallel is not always good" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Without fully understanding what is happening under the hood, parallelizing your code can lead to slower performance." />
+<meta property="og:description" content="Without fully understanding what is happening under the hood, parallelizing your code can lead to slower performance." />
+<link rel="canonical" href="http://localhost:4000/experiments/2023/11/24/parallel-good.html" />
+<meta property="og:url" content="http://localhost:4000/experiments/2023/11/24/parallel-good.html" />
+<meta property="og:site_name" content="Open Tech" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-24T23:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Parallel is not always good" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-24T23:00:00+01:00","datePublished":"2023-11-24T23:00:00+01:00","description":"Without fully understanding what is happening under the hood, parallelizing your code can lead to slower performance.","headline":"Parallel is not always good","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/experiments/2023/11/24/parallel-good.html"},"url":"http://localhost:4000/experiments/2023/11/24/parallel-good.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Open Tech" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Open Tech</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/phd-work/">My PhD Work</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Parallel is not always good</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-11-24T23:00:00+01:00" itemprop="datePublished">Nov 24, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Without fully understanding what is happening under the hood, parallelizing your code can lead to slower performance.</p>
+
+<h1 id="context">Context</h1>
+<p>I am working at the moment on evolutionary optimization for neural networks, to train agents to play games. To give a fitness for the neural network, the agent need to play N games (starting from random position), and the fitness is the average score of those N games. These N games are being played in parallel (using <code class="language-plaintext highlighter-rouge">multiprocessing</code> library in python).</p>
+
+<p>In this case, I’ve 32 cores available, and I am running 32 games in parallel.</p>
+
+<p>The stack here was simple: <code class="language-plaintext highlighter-rouge">python</code> for the code, <code class="language-plaintext highlighter-rouge">python-arcade</code> for the game design, <code class="language-plaintext highlighter-rouge">pytorch</code> for the neural network, and <code class="language-plaintext highlighter-rouge">pygmo</code> for the evolutionary optimization.</p>
+
+<h1 id="the-problem">The problem</h1>
+<p>The problem is that the speed of execution. It was abysmal. I was getting individual (aka: 32 games played) in ~5 seconds. This is a very long time for a super simple game. I was expecting something in the order of milliseconds.</p>
+
+<p>In general, especially early on in the experimentation process, a long optimization time is always a sign of bad design, and that I am doing something wrong.</p>
+
+<h1 id="the-investigation">The investigation</h1>
+<p>My first thought was that it is <code class="language-plaintext highlighter-rouge">python-arcade</code> that is the problem. I went deep into the package, and had conversations with some of the developers on the discord channel. My suspicion was geared towards the game clock. Each game needs a ticking clock. The clock speed determines the number of frames per second. My hunch was that in a headless mode though, the same clock is being used, thus the bad performance (basically, in <code class="language-plaintext highlighter-rouge">headless</code> mode, I want the clock to tick AS FAST AS POSSIBLE).</p>
+
+<p>I was wrong: there was no clock in the headless mode. The problem was somewhere else.</p>
+
+<p>My next thinking was: it has to be that <code class="language-plaintext highlighter-rouge">python-arcade</code> itself is slow. This was a half-ass guess, but in this elimination process, I need to rule it out. So, I built a game engine from scratch (that operates on a matrix of ascii characters). Things can’t get any faster than this.</p>
+
+<p>Run the optimization, and lo and behold….there is almost no gain whatsoever!</p>
+
+<p>Almost ready to surrender, I then converted the multiprocessing evaluation into sequential evaluation, just to set a benchmark and record my observations for later. To my sheer surprise, the was a phenomenal gain in speed!</p>
+
+<p>I need to dig a bit deeper into this (profile the code properly), but I am nearly confident now it is because of how <code class="language-plaintext highlighter-rouge">pytorch</code> works: the library is already very efficient in using the different cores. Having many instances of a <code class="language-plaintext highlighter-rouge">pytorch</code> library is most likely to choke the available CPU resources, leading to this excessive delays.</p>
+
+<p>I probably need to invest more on my debugging / profiling skills: elimination process is cool and effective, yet bloody expensive.</p>
+
+<p>….hard lesson learned.</p>
+
+  </div><a class="u-url" href="/experiments/2023/11/24/parallel-good.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Open Tech</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Open Tech</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/osm3000"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">osm3000</span></a></li><li><a href="https://www.twitter.com/osm3000"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">osm3000</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I wonder the world seeking the beauty in systems and patterns, natural or man-made...</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
