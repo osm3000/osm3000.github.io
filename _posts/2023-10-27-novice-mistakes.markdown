@@ -3,6 +3,7 @@ layout: post
 title:  "Reflections on Programming"
 date:   2023-10-27 00:00:00 +0200
 categories: thinking
+published: false
 ---
 
 There is a deep love that is hard to understand or express: the simplicity and purity of the relationship, sound of keyboard, the feeling of control, the gratification of the outcome, the challenge of the puzzle, the room for improvement, the patience of the machine...

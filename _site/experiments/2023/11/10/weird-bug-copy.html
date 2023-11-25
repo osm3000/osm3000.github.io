@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Weird issue with multiprocessing in python…at scale | Open Tech</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Weird issue with multiprocessing in python…at scale" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Context" />
+<meta property="og:description" content="Context" />
+<link rel="canonical" href="http://localhost:4000/experiments/2023/11/10/weird-bug-copy.html" />
+<meta property="og:url" content="http://localhost:4000/experiments/2023/11/10/weird-bug-copy.html" />
+<meta property="og:site_name" content="Open Tech" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-10T23:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Weird issue with multiprocessing in python…at scale" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-10T23:00:00+01:00","datePublished":"2023-11-10T23:00:00+01:00","description":"Context","headline":"Weird issue with multiprocessing in python…at scale","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/experiments/2023/11/10/weird-bug-copy.html"},"url":"http://localhost:4000/experiments/2023/11/10/weird-bug-copy.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Open Tech" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Open Tech</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/phd-work/">My PhD Work</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Weird issue with multiprocessing in python...at scale</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-11-10T23:00:00+01:00" itemprop="datePublished">Nov 10, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="context">Context</h1>
+
+<p>For several weeks now, I’ve been working on building a simple game, to test ideas and emergent behaviors from agents learning playing a game. The learning is done by either evolutionary algorithms (the current status) or probably later down the road, reinforcement learning.</p>
+
+<p>My stack is simple: <code class="language-plaintext highlighter-rouge">python-arcade</code> for the game development, <code class="language-plaintext highlighter-rouge">pygmo</code> for the evolutionary algorithms, and <code class="language-plaintext highlighter-rouge">pytorch</code> for the neural networks.</p>
+
+<p>The first game is a proof of concept: two agents, one of them has to shoot the other. Each agent is controlled by a neural network, and the neural network is trained using evolutionary algorithms. Both agents use the same neural network. For the sake of simplicity, the neural network takes as input the position of both agents, and outputs the action to take (move forward, fire…etc).</p>
+
+<h1 id="the-problem">The problem</h1>
+
+<p>For several weeks now, there was a stagnation in my progress. A big reason for this was the a problem that happened after nearly ~1800*32 evaluation times: the optimization program just freezes.</p>
+
+<p>To describe what happens, there is class holding the problem: evaluate the quality of a solution (in this case, a neural network that represent the tank policy), by playing 32 games (the number of cores I’ve available), and measure the average score. The 32 games are played in parallel, thanks to the <code class="language-plaintext highlighter-rouge">multiprocessing</code> library in python.</p>
+
+<p>The parallel evaluation exists inside the class, something like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A snipped from the problem class
+</span><span class="k">class</span> <span class="nc">Problem</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">solution</span><span class="p">):</span>
+        <span class="c1"># ...
+</span>        <span class="k">with</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="nc">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">pool</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="n">worker</span><span class="p">,</span> <span class="nf">range</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
+        <span class="c1"># ...
+</span></code></pre></div></div>
+<p>where the <code class="language-plaintext highlighter-rouge">worker</code> is basically a game run.</p>
+
+<p>The issue is that after a while, the whole thing just freezes. The 32 processes are still running, but they are not doing anything. The CPU usage is idle. The memory usage is idle. The processes are still alive, but they are not doing anything. They are just stuck.</p>
+
+<p>This kind of problems is probably the most annoying kind: a ghost in the wires. There are no traces that I can find of why there is a problem, and it is difficult to reproduce.</p>
+
+<p>Without better information, I went through a process of elimination: I started with the <code class="language-plaintext highlighter-rouge">pygmo</code> optimization library. So, I built a small optimization library from scratch, with a couple of algorithms, benchmarked them, and then used it instead. Yet, the problem persisted.</p>
+
+<p>I tried to use a <code class="language-plaintext highlighter-rouge">signal</code> to kill the processes after a certain time, but the problem persisted.</p>
+
+<p><em>I then accidentally moved the <code class="language-plaintext highlighter-rouge">with multiprocessing.Pool(processes=32) as pool</code> part outside the class, and the problem disappeared. I thought it was a coincidence, but it wasn’t. The problem was gone.</em></p>
+
+<h1 id="why-is-that">Why is that?</h1>
+
+<p>After asking chatgpt, it seems that the use of the <code class="language-plaintext highlighter-rouge">multiprocessing</code> library inside a class implies that the class will have to pickled and unpickled. The pickled class is passed to the new processes. This can lead to unexpected behavior or even deadlocks if the class state cannot be pickled or if it has side effects when pickled and unpickled.</p>
+
+<p>By moving the <code class="language-plaintext highlighter-rouge">multiprocessing</code> part outside the class, there is no need to pickle the class, and the problem is gone.</p>
+
+<p>According to ChatGPT, to avoid pickling issues in python, the advice is:</p>
+<ol>
+  <li>Use top-level functions: Functions that are defined at the top level of a module are easier to pickle and unpickle. Avoid using lambda functions or functions defined inside other functions or methods.</li>
+  <li>Avoid non-picklable objects: Some objects cannot be pickled, including open file or network connections, threads, processes, stack frames, deeply recursive classes, and others. If you need to share such objects between processes, consider using a server process or file-based sharing.</li>
+</ol>
+
+<p>…I hope this is right.</p>
+
+  </div><a class="u-url" href="/experiments/2023/11/10/weird-bug-copy.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Open Tech</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Open Tech</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/osm3000"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">osm3000</span></a></li><li><a href="https://www.twitter.com/osm3000"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">osm3000</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I wonder the world seeking the beauty in systems and patterns, natural or man-made...</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
