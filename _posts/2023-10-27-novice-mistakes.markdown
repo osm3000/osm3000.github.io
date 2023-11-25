@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Reflections on Programming"
+title:  "Reflections on learning programming"
 date:   2023-10-27 00:00:00 +0200
 categories: thinking
-published: false
+published: true
 ---
 
 There is a deep love that is hard to understand or express: the simplicity and purity of the relationship, sound of keyboard, the feeling of control, the gratification of the outcome, the challenge of the puzzle, the room for improvement, the patience of the machine...
@@ -82,7 +82,50 @@ I started a MSc in embedded systems in Switzerland, but two months in, it was cl
 There were ~6 months until I started the MSc. Since I don't come from a CS background, and my math (statistics in particular) wasn't up to the task, I decided to take the time to invest in online courses, address my weak points, and prepare for the MSc.
 
 One course in particular I tried to do many times a year earlier, and failed consistently, was Algorithms course from Stanford. Every time I made an excuse: I was too busy, the stars were not aligned, ...etc.
-This time, I was adamant to get it right. I even blamed the course itself.
-So, a similar course, but from Princeton, was starting. I was determined to get it right this time. First week was brutal, I struggled a lot. Second week, I was working day and night, I simply couldn't finish.
 
-There was this shocking realization that...I am not good at programming in the first place. 
+This time, I was adamant to get it right. I even blamed the course itself.
+
+So, a similar course, but from Princeton, was starting. I was determined to get it right this time. First week was brutal, I struggled a lot. Second week, I was working day and night, I simply couldn't finish. There was this shocking realization that...I am not good at programming in the first place.
+
+With humiliating idea in my mind, I searched for a 101 programming course. I ended up with MITx 6.00.1x (and afterwords 6.00.2x), which was wonderful by all standards, and also my first introduction to `python`. Heavy course, but it set strong foundations, that ended up being very useful later on.
+
+## Flourishing (2015 - 2019)
+During the MSc, internships, and Phd, I wrote a lot of programs. Through these many iterations, my level (and comfort with writing code) improved rapidly, whether in terms of speed, quality or abstractions. My focus was on scientific experiments or data analysis during this period.
+
+Quantity was important. Quantity led to emergent of quality.
+
+Just to be clear, by any industry standards, my code quality was still very low (shocking realization that I had to face during interviews).
+
+Something also that struck me is that discussing the coding with others led to rapid feedback, and hints here and there, that accelerated the learning and the improvement process rapidly.
+
+Most of the code that I wrote though was being used by me only, for few times. This is things with scientific experiments: you don't necessarily have a clear vision of what the problem is going to be, so it is hard to imagine an architecture that will be useful in the long run, thus, you end up writing a lot of "disposable" code.
+
+But there is an important lesson here that I always carried with me: just go for it. Iterations are unavoidable, and perfection from the first time is a myth. While I still cherish this value, it led to a lot of bad impressions later on in life: people will always judge from the first iteration.
+
+The exposure that I had to other technologies was very limited: I didn't know anything about databases. `git` was counter-intuitive to me. I couldn't build a dynamic website, or knew anything about the web (except HTML perhaps?) or networks. With such amount of disposable code, writing tests was like discussing science fiction.
+
+## The industry (2020 - ...)
+
+In 2020, I started my second startup, as part of "Entrepreneur First" program. I was the CTO. A friend of my co-founder, Max, joined us. A veteran software engineer, with a lot of experience in the industry. The whole things lasted for 3 months. We deployed a couple of prototypes with customers. I've learned A LOT from Max. He was a very humble, down-to-earth person. He took the time to explain the basics of the basics to me.
+
+It was the first time I "deploy" something, the first time anyone is using my work. It felt really great! (and I still get this feeling to this day when people are using my work).
+
+During this period, one my roommates, Dom, was on an accelerated path of self-improvement to become a software engineer. We had a lot of discussions, and this led to rapid improvement on my side as well.
+
+From the continuous "issues" during the interviews, it was clear that I need to do a lot of conscious effort to improve my "first" outcome when I write code. The problem was, coming from a scientific background, is that I don't have any clear patterns in my mind (since, as I explained earlier, the problem is not clear most of the time in science, and a lot of the code is disposable). 
+
+This is not the case in industry though: the problems do evolve for sure, but somehow, the patterns are the same. And when you start a new work, there is a "right way" of doing things. Granted, there are opinions here, but enumerable. Going out of those ways/patterns seemed to always raise a red flag to the person viewing the code. 
+
+It took a while to understand that, and with trial-and-error, and lots of good advice and informative discussions, I finally started converging to these patterns, and the first iteration of my code started to look better and better.
+
+All the elements that didn't make sense to more started to fell into place: git, database, workflows, testing, ...etc. I still have a lot to learn, but I am getting there. And now I am going more towards system design, distributed systems, and cloud architecture.
+
+## Conclusion
+
+I've always compared myself to those hackers in "Hackers: Heroes of the Computer Revolution" book, or others that I was reading about all the time. I always felt really terrible about myself, and always super frustrated. I felt terrible for not being of a good-enough nationality, or having the right environment and resources. Getting to where I am at this moment was a very long and painful journey.
+
+What if I had a coach? What if I natively spoke English? What if I had a chance to go to MIT? 
+
+Yet, in reflection, this self-torture never bare any fruits. There was no difference in outcome between this and being optimistic, relaxed, and enjoying the process. This doesn't negate the important of being attentive, working hard, and seeking the opportunities. 
+
+I am more at peace now. I just hope that, for those who are facing similar situations like I had back in the day: work hard, be flexible, but don't hate yourself. There are things that you can control, but there are things that you can't. Don't settle, but don't torture yourself either.
