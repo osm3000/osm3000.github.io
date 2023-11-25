@@ -1,0 +1,14 @@
+---
+layout: page
+title: Experiments Reports
+published: false
+<!-- permalink: /docs/ -->
+---
+
+List of the reports of the experiments
+
+{% for report in site.experiments %}
+<h3><a href={{report.url}}>{{ report.title }}</a></h3>
+<p>{{ report.date | date_to_string }}</p>
+<p>{{ report.snippet | markdownify }}</p>
+{% endfor %}

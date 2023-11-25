@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>My PhD Work | Open Tech</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="My PhD Work" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I wonder the world seeking the beauty in systems and patterns, natural or man-made…" />
+<meta property="og:description" content="I wonder the world seeking the beauty in systems and patterns, natural or man-made…" />
+<link rel="canonical" href="http://localhost:4000/phd-work/" />
+<meta property="og:url" content="http://localhost:4000/phd-work/" />
+<meta property="og:site_name" content="Open Tech" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="My PhD Work" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"I wonder the world seeking the beauty in systems and patterns, natural or man-made…","headline":"My PhD Work","url":"http://localhost:4000/phd-work/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Open Tech" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Open Tech</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/ea_experiments.html">Experiments Reports</a><a class="page-link" href="/phd-work/">My PhD Work</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">My PhD Work</h1>
+  </header>
+
+  <div class="post-content">
+    <p>My PhD focus was on studying a problem called <em>styles</em> or <em>personas</em>, using deep neural networks. You can find the whole manuscript <a href="https://www.google.com/url?q=https%3A%2F%2Ftel.archives-ouvertes.fr%2Ftel-02488856%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3ceDR4XaqtfO4mOVohrkgq">here</a>. The papers published during this period can be found <a href="https://scholar.google.com/citations?user=FpRt65QAAAAJ&amp;hl=en">here</a>.</p>
+
+<h2 id="but-what-is-a-style-anyway">But what is a style anyway?</h2>
+
+<p>Long story short, whenever you do something, there are two components: what you want to do (task), and how you do it (style).</p>
+
+<p>An example when you say the word “<em>seriously?</em>”. Depending on the manner you say it, it will carry different meaning (sarcastic or surprise for example). One task, two different styles, two different results in this case.</p>
+
+<p>Another example is writing. You can the same the letter (the task), but with multiple fonts (the style). In this case, you are perceiving the final shape of the letter (the letter image).</p>
+
+<!-- ![](https://osm3000.files.wordpress.com/2022/06/different-fonts.jpg?w=960)
+
+![](https://osm3000.files.wordpress.com/2022/06/difference-in-style-perception-1.jpg?w=960)
+
+![](https://osm3000.files.wordpress.com/2022/06/difference-in-style-perception-2.jpg?w=960) -->
+
+<figure><img src="https://osm3000.files.wordpress.com/2022/06/different-fonts.jpg?w=960" alt="Trulli" style="width:100%" /><figcaption align="center"><b>Different writing styles that is clear at the end</b></figcaption></figure>
+<figure><img src="https://osm3000.files.wordpress.com/2022/06/difference-in-style-perception-1.jpg?w=960" alt="Trulli" style="width:100%" /><figcaption align="center"><b>Two letters that look exactly the same, but....</b></figcaption></figure>
+<figure><img src="https://osm3000.files.wordpress.com/2022/06/difference-in-style-perception-2.jpg?w=960" alt="Trulli" style="width:100%" /><figcaption align="center"><b>when you look at the dynamics, you can see they are actually different: the green dot is the starting point of the drawing. The solid red arrows represent the pen strokes and their directions. The dotted arrows represent the air strokes (the movement of the pen without touching the paper)</b></figcaption></figure>
+
+<p>But it is different when you look at the writing dynamics.</p>
+
+<p>What is the difference between the two drawing of letter <strong>X</strong> on the left? hmm, nothing…..right?</p>
+
+<p>But what if we look at the pen movement for each letter, something interesting is noticed:</p>
+
+<ul>
+  <li>The writer for the left letter starts from top left, and proceeds to draw the letter counter clockwise.</li>
+  <li>The writer for the right letter starts from top right, and proceeds to draw the letter clockwise.</li>
+</ul>
+
+<p>This is not apparent at all when you look at the final product (i.e., the image of the letter), but once you look the pen sequence, you can see the difference.</p>
+
+<p>Question here: would you consider this as a style or not?</p>
+
+<p>The answer is: it depends on what you care about! And this is a big difficulty.</p>
+
+<p>The concept of style is ill-defined (it is not always clear what is the task and what is the style), and it differs from one field to another. It also depends on which angle of you are looking from. Let’s go back to the writing example: In the previous examples, we know the task. We can describe it clearly. But is this always the case? In simple cases, probably yeah, but if you have a complex sequence of behavior (lets say two people interacting with each other), the set of tasks are diluted and unclear.</p>
+
+<p>In such realistic scenario, there has to be a heuristic first to divide the sequence into a set of tasks, and then explore the styles of one of those tasks (or at least some of them). We can consider those as <em>local styles</em>.</p>
+
+<p>There could be also some <em>global styles</em> (high tone of voice for example, defensive or offensive attitude,….etc).</p>
+
+<p><em><strong>I did not handle these cases during the PhD though. I always worked within a well-defined task definition.</strong></em></p>
+
+<h2 id="why-studying-styles-what-is-the-final-objective">Why studying styles? what is the final objective?</h2>
+
+<p><a href="https://osm3000.files.wordpress.com/2022/06/nina_robot.jpg"><img src="https://osm3000.files.wordpress.com/2022/06/nina_robot.jpg?w=570" alt="" /></a></p>
+
+<p>iCub robot, Nina (GIPSA Lab)</p>
+
+<p>Our long-term objective is to enable our humanoid iCub robot <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.gipsa-lab.grenoble-inp.fr%2Fprojet%2FNINA%2Fhome.html&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw2AbeaZXRmBb_5LP-zpUBHj">Nina</a> to exhibit personalized behavior suitable for the person interacting with it. This will enhance the user experience, and will allow for a more natural interaction with the robot.</p>
+
+<p>At the moment, we successfully used machine learning approaches in order to build models of human-robot interaction. However, when using these models to generate behaviors, this behavior usually represents an average over the learned behaviors (which is expected).</p>
+
+<p>The goal is to learn models of styles, and use it to bias the models of interaction that we have, in order to generate more personalized behaviors.</p>
+
+<h2 id="what-am-i-doing-exactly-in-the-phd">What am I doing exactly in the PhD?</h2>
+
+<p>My PhD focus on studying styles, given that the task is well-known, using deep learning approach. In particular, we were concerned with the following questions:</p>
+
+<ol>
+  <li>Propose a framework to study styles</li>
+  <li>What kind of benchmarks are suitable for comparison?</li>
+  <li>How to extract styles?</li>
+  <li>If we learn some styles, can we leverage them to accelerate the learning of new styles? (i.e., transfer learning of styles?)</li>
+</ol>
+
+<p>After many over-complicated or over-simplified approaches, we settled on the use of <em>Deep Autoencoders</em> as the basis to study styles.</p>
+
+<h3 id="propose-a-framework-to-study-styles">Propose a framework to study styles</h3>
+
+<p>If you know the styles in advance, and you have labelled data for these styles (i.e., you have explicit knowledge of the styles), congrats, you are with the classification framework! You can have explicit evaluation of the styles as well (via metrics like accuracy and F1-score for example).</p>
+
+<ul>
+  <li>I assumed styles to be categorical here (ex: say clockwise vs counter clockwise in drawing letter X), but they could be continuous as well.</li>
+</ul>
+
+<p>But what if you don’t know (as it is usually the case), then how do you study styles? Explicit study and evaluation are out of the question in this case.</p>
+
+<h3 id="the-assumptions-in-our-work">The assumptions in our work</h3>
+
+<ul>
+  <li>A notion of a task is known beforehand.</li>
+</ul>
+
+<h2 id="a-word-about-tasks-and-style-perspective">A word about tasks and style (perspective)</h2>
+
+<p>Identifying the set of relevant tasks and styles is contextual; it depends on the context you are looking at the problem.</p>
+
+<p>The way I think about it is that: the problem is fixed, but can’t be observed. Depending on the context, we can see an aspect of the problem (styles + task).</p>
+
+<p>One can imagine this as having a light bulb directed to a some geometrical body. We can only observe the shadow. The shadow tells us a bit about the body, but not the complete fact. Depending on the direction of the light bulb, the shadow will change, showing us a different aspect for the problem. Stretch your imagination a bit and imagine the shadow has colors as well, depending on the direction of the light bulb, its distance, and some aspects of the problem. On can imagine in this case that a task in this case will be the geometrical shape of the shadow (a container), and the style is the coloring of the shadow.</p>
+
+<p>Lets take handwriting as an example: the problem is handwriting. Letter “<em><strong>E</strong></em>” is an example of handwriting (a shadow resulting from the light bulb being at some angle). The shadow colors that f it in the resulting geometric shape are the styles of letter E (<strong>also, mention that the bulb not only determine the letter, but also the context – are we looking at a picture or the movement sequence of the pen).</strong></p>
+
+<h3 id="food-for-thought">Food for thought</h3>
+
+<ul>
+  <li>Instead of trying to model the problem itself (which we don’t have access it), can we model the light bulb possible movement instead? Then, can we compile all the resulting shadows from lots of light movement, in order to get to see the actual problem?</li>
+  <li>Problems can have problems inside them, depending on the level of granularity (another context) that you look at the problem: consider drawing as a problem. Handwriting can be an aspect of drawing, and maybe we can study handwriting as a whole. We can also look at handwriting as the problem, and the individual letters as aspects of handwriting. We can look at letter <strong>A</strong> as a problem, the sequence of micro-movement that construct letter A as the aspects, and so on.
+    <ul>
+      <li>Matter can be divide into pieces, and the pieces into smaller pieces, …etc, tell we reach the atoms, then we can divide the atoms into internal components, and so on</li>
+    </ul>
+  </li>
+  <li>The genius really is to define the the limits of what you are looking for, and develop solutions that fit that limit.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Open Tech</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Open Tech</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/osm3000"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">osm3000</span></a></li><li><a href="https://www.twitter.com/osm3000"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">osm3000</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I wonder the world seeking the beauty in systems and patterns, natural or man-made...</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
