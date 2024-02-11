@@ -23,7 +23,7 @@ title: Open Tech
 description: >- # this means to ignore newlines until "baseurl:"
   I wonder the world seeking the beauty in systems and patterns, natural or man-made...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.osm-ai.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: osm3000
 github_username:  osm3000
 linkedin_username: omar-mohammed3000
