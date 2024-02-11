@@ -27,6 +27,7 @@ url: "https://blog.osm-ai.net" # the base hostname & protocol for your site, e.g
 twitter_username: osm3000
 github_username:  osm3000
 linkedin_username: omar-mohammed3000
+google_analytics: G-Q27H1G7CS8
 
 collections:
   experiments:
