@@ -1,2 +1,2 @@
 serve_local:
-	 bundle exec jekyll serve
+	 clear; bundle exec jekyll serve
