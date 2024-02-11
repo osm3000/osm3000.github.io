@@ -2,7 +2,7 @@
 layout: page
 title: My PhD Work
 permalink: /phd-work/
-published: false
+published: true
 comments: This needs to be heavily revised. The whole concept of the task and style doesn't make much sense to be. There is a need for "lowest common denominator" component.
 ---
 
