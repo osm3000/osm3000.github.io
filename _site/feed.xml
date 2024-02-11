@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-26T14:15:11+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Open Tech</title><subtitle>I wonder the world seeking the beauty in systems and patterns, natural or man-made...</subtitle><entry><title type="html">Parallel is not always good</title><link href="http://localhost:4000/experiments/2023/11/24/parallel-good.html" rel="alternate" type="text/html" title="Parallel is not always good" /><published>2023-11-24T23:00:00+01:00</published><updated>2023-11-24T23:00:00+01:00</updated><id>http://localhost:4000/experiments/2023/11/24/parallel-good</id><content type="html" xml:base="http://localhost:4000/experiments/2023/11/24/parallel-good.html"><![CDATA[<p>Without fully understanding what is happening under the hood, parallelizing your code can lead to slower performance.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-11T18:18:32+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Open Tech</title><subtitle>I wonder the world seeking the beauty in systems and patterns, natural or man-made...</subtitle><entry><title type="html">Experiments with Coevolution</title><link href="http://localhost:4000/2023/12/20/coevolution-part-1.html" rel="alternate" type="text/html" title="Experiments with Coevolution" /><published>2023-12-20T23:00:00+01:00</published><updated>2023-12-20T23:00:00+01:00</updated><id>http://localhost:4000/2023/12/20/coevolution-part-1</id><content type="html" xml:base="http://localhost:4000/2023/12/20/coevolution-part-1.html"><![CDATA[<h1 id="manifesto">Manifesto</h1>
+
+<h2 id="memory-language-and-intelligence">Memory, Language and Intelligence</h2>
+
+<p>One of my main interests is to understand the role in memory in intelligence. Memory, when discussed in the context of machine learning, normally refers to hidden state of a neural network (if you are old fashion), or perhaps to the attention mechanisms in transformers (if you are new fashion).</p>
+
+<p>But, I don’t think that is the full story.</p>
+
+<p>Many years ago, I worked in knowledge-restructuring within the context of artificial intelligence. The idea is that when you learn something, there are multiple steps of transformation that happen to what you learned. You can imagine what you learned as an entity in itself, it will be transformed, and will transform you as well, step by step.</p>
+
+<p>But at a certain point, you can keep all this knowledge in your head, in this mushy state. This is where current machine learning normally stops.</p>
+
+<p>Humans learned the hard way the discretization/digitization provide a much better way to store and retrieve information. You can unlock so much capacity by doing that. Nature learned the same thing: DNA is a discrete representation of the information that is passed from one generation to the next.</p>
+
+<p>This where, I believe, memory comes into play. If you can build a proper discrete memory, with a management system on top of it, then you can unlock a lot of capacity here, especially in the reasoning and planning parts of intelligence.</p>
+
+<p>But this is still a limited thinking. For neural networks, this will be the equivalent of moving from analog to digital computers. This, again, still look at memory as a hidden state of the system: More organized perhaps, but hidden nonetheless.</p>
+
+<p>Intelligence, it seems more and more, an emergent property. It is difficult, if not possible, to predict the emergent properties of a system. But we know that certain conditions need to exist in order for a collection of things, at a scale, to become a complex system. One of these conditions is the ability to communicate. Enter language.</p>
+
+<p>Language, is a memory for the wisdom of the collective, and a mean to communicate the wisdom. It is the key ingredient in a neural network (the fact that the neurons are connected together, and communicating via values governed by activation functions and learned weights). It is the key ingredient in a society (the fact that people are connected together, and communicating via words governed by social norms and learned behaviors).</p>
+
+<p>But language doesn’t need to be spoken only. In fact, almost all artifacts manufactured by humans are a form of language. A mug is a memory: its design is a memory of its purpose, and this is communicated visually. A bank is a memory for our money, and a way to communicate this money between different entities.</p>
+
+<p>AI will emerge in a digital city, will become more performant with better memories, and AGI will take a life of its own with many AI agents that know how to build communicable artifacts.</p>
+
+<p>AGI will not be invented, it will be discovered. It is out there already, waiting for the proper medium and conditions to emerge.</p>
+
+<h2 id="it-is-all-one-representation">It is all one representation</h2>
+<p>While building higher and more appropriate representations (memory, language, etc.) is important, it is also important to remember that it is all one representation. It just depends on what you are looking at. This is when language becomes a problem.</p>
+
+<p>A human, an environment…they are both the same. If they world is represented by 10 variables, an environment is represented by 6, then a human is represented by 4, 3 of those 6, and 1 of the other 4. The world is one big multi-dimensional tensor, and everything in this world is a world in itself, albeit very sparse, to represent our perception and capabilities to interact with the world.
+&lt;!–</p>
+<h1 id="what-is-next">What is next?</h1>
+<p>Only experiments, diverse and rigorous, can shade some light on the truth behind these ideas.</p>
+
+<ol>
+  <li>✅ Can I replace tradeoff large feed-forward networks with smaller networks that have a memory? <a href="https://personal.osm-ai.net/experiments-on-the-side/memory-vs-depth-in-neural-networks-exploratory-comparison">I have already shown that this is possible over two datasets (MNIST and Fashion-MNIST).</a></li>
+  <li>When does a language emerge?</li>
+  <li>–&gt;</li>
+</ol>]]></content><author><name></name></author><summary type="html"><![CDATA[Manifesto]]></summary></entry><entry><title type="html">Parallel is not always good</title><link href="http://localhost:4000/experiments/2023/11/24/parallel-good.html" rel="alternate" type="text/html" title="Parallel is not always good" /><published>2023-11-24T23:00:00+01:00</published><updated>2023-11-24T23:00:00+01:00</updated><id>http://localhost:4000/experiments/2023/11/24/parallel-good</id><content type="html" xml:base="http://localhost:4000/experiments/2023/11/24/parallel-good.html"><![CDATA[<p>Without fully understanding what is happening under the hood, parallelizing your code can lead to slower performance.</p>
 
 <h1 id="context">Context</h1>
 <p>I am working at the moment on evolutionary optimization for neural networks, to train agents to play games. To give a fitness for the neural network, the agent need to play N games (starting from random position), and the fitness is the average score of those N games. These N games are being played in parallel (using <code class="language-plaintext highlighter-rouge">multiprocessing</code> library in python).</p>
@@ -1078,176 +1118,4 @@ The keyboard I have…No numbers, no arrows, any control button :(</p>
 
 <h1 id="acknowledgement">Acknowledgement</h1>
 
-<p>Many thanks for <a href="https://www.linkedin.com/in/dominic-algernon-wallis-123b42187/">Dom Wallis</a>, <a href="https://www.linkedin.com/in/juliette-jaupitre/">Juliette Jaupitre</a>, <a href="https://www.linkedin.com/in/firasmourad/">Firas Mourad</a>, for their inputs, suggestions, and encouragement :)</p>]]></content><author><name></name></author><category term="electronics" /><category term="engineering" /><category term="thinking" /><summary type="html"><![CDATA[Over the last couple of years, I came to the conclusion that I need to have a higher degree of control over my environment:]]></summary></entry><entry><title type="html">A view on France - Part 1</title><link href="http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html" rel="alternate" type="text/html" title="A view on France - Part 1" /><published>2022-02-15T23:00:00+01:00</published><updated>2022-02-15T23:00:00+01:00</updated><id>http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1</id><content type="html" xml:base="http://localhost:4000/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html"><![CDATA[<p>For whatever reason, even though I live in France for ~8 years now, I still struggle with learning French. My environment is always in English all the time, and all my French friends speak good English as well. To my surprise, speaking French is not a deal breaker as I once thought.</p>
-
-<p><a href="https://github.com/osm3000/Language-Analysis">All the code used in this analysis can be fine here</a>.</p>
-
-<h2 id="solutions-that-itried">Solutions that I tried</h2>
-
-<p>The road started normally, with dreams that working hard will do the trick, and that this problem is pretty much solved long time ago. Unfortunately, that proved to be not the case — for me at least. I tried:</p>
-
-<ul>
-  <li>Apps like Babbel and Duolingo: Incredibly frustrating experience. Words that doesn’t seem to be used anywhere else. Whatever progress I make in the app (and trust me, I did a lot of progress) doesn’t seem to translate into reality at all. I don’t feel my comprehension or my ability to speak improved in any significant manner after few months of regular use of these apps. </li>
-  <li>Listening to TV series and programs: I just don’t like TV series or reality shows or any of that in general. It didn’t take long before I stopped this direction. </li>
-  <li>Listening to podcasts/videos on my favorite topics: mainly technical interests. That was quite helpful for sometime. It is a passive activity though.</li>
-  <li>Community teachers: in platforms like <a href="https://www.italki.com/">italki</a>. A lot of progress were made there, but it is not easy to find enough good teachers or sustainable appointments. My objective was 1 hour of French everyday. No one teacher could satisfy this requirement. I ended up between 4~5 amazing teachers, but it is hard to coordinate and reserve the time. It was always a complex optimization problem.</li>
-  <li>Courses in language centers: it was always incredibly expensive, hard to find on short notice, inflexible time slots that doesn’t fit with my work.</li>
-</ul>
-
-<p>In short, no luck :( </p>
-
-<h2 id="time-for-the-technical-hammer">Time for the technical hammer</h2>
-
-<p>My idea is to try to systematically understand what are the characteristics of the French language really is, and use that to design a data-driven curriculum for myself.</p>
-
-<p>To understand the French language, I decided to analyze the articles in LeMonde newspaper. I scrapped a considerable amount of corpus, ~13K articles, from different domains. Using some basic NLP and frequency analyses, I am hoping to reach some insights about what the language is, that can enhance the quality of my decisions.</p>
-
-<p>When analyzing the verbs, I decided to convert all the verbs to their original form (the simple present). Otherwise, it creates a lot of unnecessary clutter in the analysis.</p>
-
-<h2 id="overview-on-theresults">Overview on the results</h2>
-
-<p><a href="https://osm3000.files.wordpress.com/2022/02/wordcloud_allwords.png"><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_allwords.png?w=1024" alt="" /></a></p>
-
-<p>Word-cloud for all the words</p>
-
-<p>One can see that verbs like <em>avoir</em>, <em>etre</em>, and connectors like <em>qui</em>, <em>que</em>, <em>et</em> and <em>il</em> are the highest recurring words in the French language.</p>
-
-<p>Let’s take a closer look at separate categories of those words: adverbs, verbs and nouns.</p>
-
-<ul>
-  <li>
-    <p><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_alladverbs.png?w=1024" alt="" /></p>
-  </li>
-  <li>
-    <p><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_allverbs.png?w=1024" alt="" /></p>
-  </li>
-  <li>
-    <p><img src="https://osm3000.files.wordpress.com/2022/02/wordcloud_allnouns.png?w=1024" alt="" /></p>
-  </li>
-</ul>
-
-<p>My personal interest is to convert these words into flashcards, and based on their frequency and importance (I will tackle the <em>importance</em> part later), I can focus on what really matter.</p>
-
-<p>Although not a quantitative analysis, if you ever used tools like Babbel or Duolingo before, you might notice that there is an asymmetry between their words and those words. For example, on of the things you learn at the beginning in those applications are words like: garcon, fille, fils, pere, mere, ….etc, but you can notice that none of those words appears in those in big font in those word-clouds. </p>
-
-<h3 id="how-many-articles-should-i-read">How many articles should I read?</h3>
-
-<p>Another issue of interest for me is: how many articles I do need to read in order to have been exposed to most of the words? I rephrased this problem in what I call the ‘insertion speed’: how much each article contribute with new unique words? </p>
-
-<p>The way I did it was not a comprehensive/realistic method in my opinion, but a fast and a quick lower-limit indicator. Basically, for each article, I measured how many words I didn’t see before, then add those new words to my seen-words-list, and move on to the next article, …etc. I ordered the resulting list — since it is noisy — in order to get a sense of what we are talking about.</p>
-
-<p><a href="https://osm3000.files.wordpress.com/2022/02/insertionspeedordered.png"><img src="https://osm3000.files.wordpress.com/2022/02/insertionspeedordered.png?w=1024" alt="" /></a></p>
-
-<p>One can see that, with around ~500 article, there is barely any new word added to the seen words. </p>
-
-<p>What I really like about the insertion speed is that it could be a way to manage my personal training procedure. If I’ve a system that is aware of the words I know so far (through articles I read, or manually inserted words), the system can then keep suggesting articles, in the area of interest, that either focus on older vocabulary (to enhance it), thus, having a small-to-no insertion speed, or to focus on learning new words, thus, asking the system for articles with higher insertion speed. </p>
-
-<p>This could be more beneficial, since it changes the personal training system from the sole focus on flashcards, to article-based learning (you will learn new words by reading the articles mentioning those words).</p>
-
-<p>With a large enough repertoire of articles — and even an easy manner to add new articles — I can definitely imagine a pretty good training procedure.</p>
-
-<h4 id="word-frequencies">Word Frequencies</h4>
-
-<p>What is really fascinating for me is the quantification of the long-tail phenomena in French (spoiler alert: MASSIVE long tail). To get an idea, let’s look at some numbers.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~7.6M words
-Number of unique words: ~116K words
-10% of the total words seen is just 3 unique words
-20% of the total words seen is just 17 unique words
-50% of the total words seen is just 375 unique words
-80% of the total words seen is just 2624 unique words
-90$ of the total words seen is just 6506 unique words
-</code></pre></div></div>
-
-<p>Even though the long-tail phenomena is expected, it is still mind-blowing for me to see it in action like this.</p>
-
-<p>While aggregation is always amazing to get a good overview over the topic, it’s interesting to dive deeper and see more specific details. Let’s look at the same stats, but for verbs, nouns, and adverbs</p>
-
-<p>Verbs</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~1.2M verb
-Number of unique words: ~11.5K verb
-10% of the total verbs seen is just 3 unique verb
-20% of the total verbs seen is just 14 unique verb
-50% of the total verbs seen is just 139 unique verb
-80% of the total verbs seen is just 585 unique verb
-90% of the total verbs seen is just 1117 unique verb
-</code></pre></div></div>
-
-<p>Nouns</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~2.8M noun
-Number of unique words: ~41.6K noun
-10% of the total verbs seen is just 27 unique noun
-20% of the total verbs seen is just 77 unique noun
-50% of the total verbs seen is just 408 unique noun
-80% of the total verbs seen is just 1731 unique noun
-90% of the total verbs seen is just 3599 unique noun
-</code></pre></div></div>
-
-<p>Adverbs</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Number of words seen: ~604K adverb
-Number of unique words: ~3.4K adverb
-10% of the total verbs seen is just 0 !! unique adverb
-20% of the total verbs seen is just 1 unique adverb
-50% of the total verbs seen is just 11 unique adverb
-80% of the total verbs seen is just 49 unique adverb
-90% of the total verbs seen is just 94 unique adverb
-</code></pre></div></div>
-
-<p>All-in-all, assuming that being good at French is about mastering <strong>80%</strong> of the words, then I should focus on the <strong>2624</strong> words for the moment, over <strong>2/3</strong> of them are nouns and less than <strong>1/3</strong> are verbs. I can easily now transfer this into flash-cards, and dig into them :)</p>
-
-<p>These are the links for those lists: <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allWords.csv">all words</a>, <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allVerbs.csv">verbs</a>, <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allNouns.csv">nouns</a> and <a href="https://github.com/osm3000/Language-Analysis/blob/main/results/noFilter/allAdverbs.csv">adverbs</a>. Maybe you can use them for your own application :)</p>
-
-<h2 id="origin-of-thedata">Origin of the data</h2>
-
-<p>I have built my database by scraping <a href="https://www.lemonde.fr/"><em>LeMonde</em></a> articles. After some investigation, I realized that the articles are organized in categories, in the form of </p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.lemonde.fr/&lt;category&gt;
-</code></pre></div></div>
-
-<p>The categories are so many, and it is not clear how to get a comprehensive list of them — or if that is the best approach. But, one can at least enumerate some of the interesting categories from the navigation bar. A better way would have been to parse the <a href="https://www.lemonde.fr/archives-du-monde/">archive of LeMonde</a>.</p>
-
-<p>Within each article, you can look for the following tags in order to get the relevant information in the HTML source:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;description&gt; : &lt;tag type&gt; - &lt;class name&gt;
-Author name: span - author__name
-Article description: p - article__desc
-Article paragraphs: p - article__paragraph
-Image links: figure &gt; img - &lt;No class name&gt;
-Image captions figure &gt; figcaption - &lt;No class name&gt;
-</code></pre></div></div>
-
-<p>You should be able to scrap any article you like immediately with this info :)</p>
-
-<p>To support the work of the journalists in LeMonde, I made a subscription in LeMonde. An added advantage is to get access to the full premium articles. Without a subscription however, using the same script, I can access the free part of the premium articles (almost 1/3 of the article).</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>I started this little exercise out of frustration, and the more I dived into it, the more exciting it turned to be. As potential clear outcomes, one can now:</p>
-
-<ol>
-  <li>Make flashcards of the important words, and focus on them, based on the uni-gram/word frequency analysis.</li>
-  <li>Prepare an article/application based learning: if I can keep count of the insertion speed, and the current words that I know, and given that I’ve a repertoire of articles, the system can recommend me the next article to read, based on criteria in between the two extreme:
-    <ol>
-      <li>I want to learn as many new words as possible (max insertion)</li>
-      <li>I want to practice what I know only (min/zero insertion)</li>
-    </ol>
-  </li>
-  <li>Analyze the quality of my writing:</li>
-</ol>
-
-<p>But one can imagine even more applications here, for example:</p>
-
-<ol>
-  <li>Bi-gram/tri-gram analysis: time to focus on making sentences. Single words are interesting and all, but small repetitive pieces of sentences are much more powerful to learn. It will cut the thinking time considerably.</li>
-  <li>Importance analysis: with techniques like TF-IDF, what are the important words in French? so far, I focused on the common words only.
-    <ol>
-      <li>Also perform this analysis per domain. It might help to ease the entry to specific domain (like science, technology, sport, …etc) by getting the key words in that domain.</li>
-    </ol>
-  </li>
-  <li>Cross this data with other data: one topic of interest for me is to understand the politicians and the media, and their inter-relationship. Recently, I got access to Twitter APIs. I would like to go deeper into what the french politicians talk about, their interaction, how and when a story breaks, …etc.</li>
-</ol>
-
-<p>I would love to know what you think :)</p>]]></content><author><name></name></author><category term="data-science" /><category term="machine-learning" /><category term="nlp" /><summary type="html"><![CDATA[For whatever reason, even though I live in France for ~8 years now, I still struggle with learning French. My environment is always in English all the time, and all my French friends speak good English as well. To my surprise, speaking French is not a deal breaker as I once thought.]]></summary></entry></feed>
+<p>Many thanks for <a href="https://www.linkedin.com/in/dominic-algernon-wallis-123b42187/">Dom Wallis</a>, <a href="https://www.linkedin.com/in/juliette-jaupitre/">Juliette Jaupitre</a>, <a href="https://www.linkedin.com/in/firasmourad/">Firas Mourad</a>, for their inputs, suggestions, and encouragement :)</p>]]></content><author><name></name></author><category term="electronics" /><category term="engineering" /><category term="thinking" /><summary type="html"><![CDATA[Over the last couple of years, I came to the conclusion that I need to have a higher degree of control over my environment:]]></summary></entry></feed>
