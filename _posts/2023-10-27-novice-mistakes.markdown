@@ -88,14 +88,14 @@ One course in particular I tried to do many times a year earlier, and failed con
 
 This time, I was adamant to get it right. I even blamed the course itself.
 
-So, a similar course, but from Princeton, was starting. I was determined to get it right this time. First week was brutal, I struggled a lot. Second week, I was working day and night, I simply couldn't finish. There was this shocking realization that...I am not good at programming in the first place.
+So, a similar course, but from Princeton, was starting. I was determined to get it right this time. First week was brutal, I struggled a lot. Second week, I was working day and night, I simply couldn't finish it. There was this shocking realization that...I am not good at programming in the first place.
 
-With humiliating idea in my mind, I searched for a 101 programming course. I ended up with [MITx 6.00.1x](https://www.edx.org/learn/computer-science/massachusetts-institute-of-technology-introduction-to-computer-science-and-programming-using-python) (and afterwords [6.00.2x](https://www.edx.org/learn/computer-science/massachusetts-institute-of-technology-introduction-to-computational-thinking-and-data-science)), which was wonderful by all standards, and also my first introduction to `python`. Heavy course, but it set strong foundations, that ended up being very useful later on.
+With this humiliating realization in my mind, I searched for a 101 programming course. I ended up with [MITx 6.00.1x](https://www.edx.org/learn/computer-science/massachusetts-institute-of-technology-introduction-to-computer-science-and-programming-using-python) (and afterwords [6.00.2x](https://www.edx.org/learn/computer-science/massachusetts-institute-of-technology-introduction-to-computational-thinking-and-data-science)), which was wonderful by all standards, and also my first introduction to `python`. Heavy course, but it set strong foundations, that ended up being very useful later on.
 
 # Flourishing (2015 - 2019)
 During the MSc, internships, and Phd, I wrote a lot of programs. Through these many iterations, my level (and comfort with writing code) improved rapidly, whether in terms of speed, quality or abstractions. My focus was on scientific experiments or data analysis during this period.
 
-Quantity was important. Quantity led to emergent of quality.
+Quantity was important. Quantity led to the emergence of quality.
 
 Just to be clear, by any industry standards, my code quality was still very low (shocking realization that I had to face during interviews).
 
