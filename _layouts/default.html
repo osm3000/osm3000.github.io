@@ -3,6 +3,14 @@
 
   {%- include head.html -%}
 
+  <head>
+    {% if page.image %}
+    <meta property="og:image" content="path/to/post/image.jpg">
+    {% else %}
+    <meta property="og:image" content="path/to/page/image.jpg">
+    {% endif %}
+  </head>
+  
   <body>
 
     {%- include header.html -%}
