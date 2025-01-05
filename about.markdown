@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
 <!-- [![](https://osm3000.files.wordpress.com/2022/04/personal.jpg?w=1024)](https://osm3000.files.wordpress.com/2022/04/personal.jpg) -->
