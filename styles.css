@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+
+html {
+  background-color: #002b36 !important;
+}
+
+body {
+    background-color: #002b36 !important;
+    color: #839496 !important;
+    /* font-family: "Funnel Display", serif !important; */
+    /* font: 100% monospace !important; */
+}
+
+h1 {
+  font-size: 2.5em; /* 40px/16=2.5em */
+  /* color: red !important; */
+
+  border-color: #094352 !important;
+  /* color: #93a1a1 !important; */
+    color: #b58900 !important;
+}
+
+h2 {
+  font-size: 1.875em; /* 30px/16=1.875em */
+  color: #d33682 !important;
+}
+
+h3 {
+  font-size: 1.5em; /* 24px/16=1.5em */
+  color: #268bd2 !important;
+}
+
+h4 {
+  font-size: 1.125em; /* 18px/16=1.125em */
+  color: #859900 !important;
+}
+
+li {
+  color: #93a1a1 !important;
+}
+
+
+a:not([class="site-title"]) {
+  color: #268bd2 !important;
+}
+a:visited {
+  color: #6c71c4 !important;
+}
+
+/* Style the color of the Site title in the navbar */
+a[class="site-title"] {
+    color: #b58900 !important;  
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        color: #eee;
+        background: #121212;
+    }
+
+    body a {
+        color: #809fff;
+    }
+} */

@@ -30,8 +30,3 @@ This made me decide to leave my beloved Mentor Graphics, and do a masters degree
 At the beginning, the plan was to make the transition from electronics to machine learning in few years, while slowly introducing them to electronics. This is due to the fact that I didn't have a CS background. So I choose to do a masters in embedded systems, while continuing on the side doing online courses in machine learning, and building my knowledge in CS.
 
 Two months into the masters (March 2014), a dear friend convinced me that I can do this transition right now, without the need for my very cautious plan. It was the point of no return. I applied for three machine learning programs, and luckily got accepted in two (April 2014), and choose [MLDM](https://mldm.univ-st-etienne.fr/), to start in September 2014. From April to September, I decided to immediately drop my other masters, and focus 24/7 on online courses, to build and enhance my knowledge in CS and ML.
-
-
----
-# News
-- As of September 2022, I am the head of MLOps at [Limbic](https://limbic.ai/).
