@@ -11,7 +11,7 @@ published: true
 1. Low stake: link blogging, sharing thoughts / things i learned
 2. High stake: projects
 
-Link blogging is particularly interesting. This is the equivalent of "re-posting" on Twitter. The Simon advice the following though:
+Link blogging is particularly interesting. This is the equivalent of "re-posting" on Twitter. Simon advice the following though:
 1. Write a summary of what I learned from it
 2. Add something extra: examples
    1. Add context
