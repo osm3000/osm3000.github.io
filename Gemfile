@@ -12,6 +12,7 @@ gem "jekyll"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
 gem "minima"
+gem 'jekyll-seo-tag'
 # gem "chirpy"
 # gem 'jekyll-theme-hacker', '~> 0.2.0'
 # gem "jekyll-archives"

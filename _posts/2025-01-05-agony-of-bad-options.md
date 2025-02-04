@@ -4,6 +4,8 @@ title:  "Escaping from Jekyll...back to Jekyll"
 date:   2025-01-05 00:00:00 +0100
 published: true
 ---
+*Updated: 02/04/2025*
+
 
 I wanted to have: 
 1. A fast WYSIWYG editor for my static website
@@ -94,3 +96,5 @@ I am suspicious about raising the slogan that "you own the content": Content has
 There is a strong stigma against building things from scratch, and I agree with it to a certain extent. I've been down this road many times, and I do wonder if it was worth it sometimes. But it feels more and more that I can rely only on the old players, or rely on myself. The new players are rarely trustworthy.
 
 So, back to Jekyll. I took a course on CSS and HTML, and I tried my best with the site. I feel better about it now than earlier when I started this. I will improve it gradually. I also need to accept the mentality that markdown on VSCode is good, and if it falls short in some places, I will use HTML and CSS instead.
+
+This will not be very sustainable however as the blog grows. I think I will need to build a custom solution at a certain point (thinking Flask, Jinja, maybe HTMX?, Tailwind, S3). But I will worry about this later.
