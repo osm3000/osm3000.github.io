@@ -12,7 +12,8 @@ def create_new_post(title, tags):
     today = datetime.date.today()
     filename = f"_posts/{today}-{title.lower().replace(' ', '-')}.md"
 
-    today = today.strftime("%Y-%m-%d %H:%M:%S +0100")
+    # today = today.strftime("%Y-%m-%d %H:%M:%S +0100")
+    today = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S +0100")
 
     # Prompt for the tags
     tags = tags.split(",")
