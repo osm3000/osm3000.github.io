@@ -1,6 +1,6 @@
 ---
 layout: post
-title: maker mentality
+title: A Maker's mentality - Solving my problems
 date: 2025-02-06 14:08:42 +0100
 tags: [reflections, personal]
 excerpt: 
