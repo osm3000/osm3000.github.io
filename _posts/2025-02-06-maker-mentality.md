@@ -10,7 +10,7 @@ published: true
 
 As a machine learning person, I always dreamt to use ML and optimization to build tools that will improve my life and the life of others. 
 
-However, ML models are useless artifacts on their own. Data analysis is probably more useful, giving insights and sometimes actionable items (e.g., my [French Journey series](www.placeholder.com)). The following obstacles were problematic:
+However, ML models are useless artifacts on their own. Data analysis is probably more useful, giving insights and sometimes actionable items (e.g., my [French Journey series](https://blog.osm-ai.net/data-science/machine-learning/nlp/2022/02/15/french-journey-part-1.html)). The following obstacles were problematic:
 1. Absence of data: a lot of the things that I want to optimize about my life require building data-collection tools and protocols, and of course, consistency in the data entry.
 2. ML models / DA insights are useful when served and wrapped by the right software designs (and sometimes hardware) to make them come to life, and serve a purpose.
 
