@@ -167,7 +167,7 @@ Only Strasbourg at 1000 m (and 750 m, not reported here) except a strong pattern
 Thus, the logical conclusions from this utter waste of time are:
 
 1. France, in general, doesn’t have a kebab issue near the train station. More scientifically, these is not enough evidence to refuse that "there is no linear relationship" hypothesis...but it just it doesn't look promising.
-2. Strasbourg is German
+2. Strasbourg is German 😅
 
 So, indeed there is no sufficient evidence for a linear relationship between the distance to the station and the quality of the kebab…
 
