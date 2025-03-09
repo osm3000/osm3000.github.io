@@ -16,7 +16,7 @@ I mean, what's next? Tacos??
 
 <!-- ![](https://www.goodfreephotos.com/cache/vector-images/challnege-accepted-stickman.png) -->
 
-<img src="https://www.goodfreephotos.com/cache/vector-images/challnege-accepted-stickman.png" alt="NEVVERRRR" width="100"/>
+<img src="https://www.goodfreephotos.com/cache/vector-images/challnege-accepted-stickman.png" alt="NEVVERRRR" style="display: block;  margin-left: auto;  margin-right: auto;" width="100"/>
 
 
 In all seriousness though, I loved the mentality, and I was initially curious about how is it in Toulouse. But if I am investing the effort, then why not build investigate other French cities as well?
@@ -181,11 +181,8 @@ But what about non-linear relationship?
 
 <!-- ![](https://c8.alamy.com/comp/HT5CK3/cartoon-vector-doodle-stickman-sitting-in-front-of-the-computer-and-HT5CK3.jpg) -->
 
-<p style="text-align: center;">
-    <img src="https://c8.alamy.com/comp/HT5CK3/cartoon-vector-doodle-stickman-sitting-in-front-of-the-computer-and-HT5CK3.jpg" width="200" alt>
-    <br>
-    <em></em>
-</p>
+
+<img src="https://c8.alamy.com/comp/HT5CK3/cartoon-vector-doodle-stickman-sitting-in-front-of-the-computer-and-HT5CK3.jpg" style="display: block;  margin-left: auto;  margin-right: auto;" width="200" alt>
 
 P-value is extremely limited concept, in the sense that it assumes a linear relationship. 
 
@@ -236,7 +233,9 @@ Looking at Strasbourg, that clearly explain a lot of things!
 
 So there is a couple of good kebabs very close (almost inside) the train station, then bad kebabs after that, the good kebab after the bad ones (this just reminded me of poor Kif in Futurama: the beautiful women, then the large women, then the petite women… 😃).
 
-[https://youtu.be/AwOJ2S6iM6g?t=36](https://youtu.be/AwOJ2S6iM6g?t=36)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=AwOJ2S6iM6g" target="_blank">
+    <img src="http://img.youtube.com/vi/AwOJ2S6iM6g/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" style="display: block;  margin-left: auto;  margin-right: auto;" />
+</a>
 
 So probably the saying should be: the quality of kebab depends non-linearly on both the distance and angle of the restaurant from the train station….
 
