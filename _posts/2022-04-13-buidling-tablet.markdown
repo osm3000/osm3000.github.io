@@ -2,6 +2,7 @@
 layout: post
 title:  "Building my own tablet"
 date:   2022-04-13 00:00:00 +0200
+tags: [projects]
 categories: electronics engineering thinking
 ---
 

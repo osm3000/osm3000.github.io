@@ -3,7 +3,7 @@ layout: post
 title:  "Thoughts on management, from the recent OpenAI announcement"
 date:   2023-11-08 00:00:00 +0200
 categories: thinking
-tags: [reflection]
+tags: [reflections]
 ---
 
 Recently OpenAI made an announcement about new changes to their products: new models, lower pricing, better performance, more desperately needed features. 

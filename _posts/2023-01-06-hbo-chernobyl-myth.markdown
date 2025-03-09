@@ -2,6 +2,7 @@
 layout: post
 title:  "Debunking the Myths of the HBO Chernobyl series"
 date:   2023-01-06 00:00:00 +0200
+tags: [investigation]
 categories: investigation
 ---
 

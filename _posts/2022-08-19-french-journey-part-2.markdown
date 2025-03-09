@@ -2,6 +2,7 @@
 layout: post
 title:  "A view on France - Part 2"
 date:   2022-08-19 00:00:00 +0200
+tags: [projects]
 categories: data-science machine-learning nlp
 ---
 

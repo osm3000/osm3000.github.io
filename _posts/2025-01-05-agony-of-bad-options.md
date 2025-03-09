@@ -2,6 +2,7 @@
 layout: page
 title:  "Escaping from Jekyll...back to Jekyll"
 date:   2025-01-05 00:00:00 +0100
+tags: [reflections, writing]
 published: true
 ---
 *Updated: 02/04/2025*
