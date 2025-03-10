@@ -4,6 +4,7 @@ title: "The kebab and the French train station: another view"
 date: 2025-03-09 18:27:27 +0100
 tags: [project]
 excerpt: Another take on the effect of distance between the train station and the quality of the kebab...
+image: /assets/images/kebab_analysis/Paris_decision_boundary_angleTrue_1000m.png
 published: true
 ---
 # Introduction
