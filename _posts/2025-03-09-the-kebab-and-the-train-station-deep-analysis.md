@@ -7,7 +7,7 @@ excerpt: Another take on the effect of distance between the train station and th
 image: /assets/images/kebab_analysis/Paris_decision_boundary_angleTrue_1000m.png
 published: true
 ---
-# Introduction
+Updated: 06/04/2025
 
 A few days ago, [I read this cool article posted on HackerNews](https://www.jmspae.se/write-ups/kebabs-train-stations/) that investigated the truth behind a French saying: "The closer to the train station, the worse the kebab."
 
@@ -30,9 +30,14 @@ Given that I never worked with GIS data before, that seemed like a good excuse t
 
 # Revisiting the data collection steps
 
-## Correcting some issues
+## What is the data being used?
+1. Position and Reviews for Kebab restaurants: this is acquired using Google Places APIs. The search for the Kebab restaurants is done by searching for the term "kebab", within a circle centered on the train station. The search is repeated for each train station.
+2. Location of the train station: This is discussed in the following subsection. Long story short, I acquired it from the SNCF database
+3. The distance between the kebab restaurant and the train station: This is discussed more below. I used the straight-line distance
 
-To get the list of the stations using `Open Maps`, the author in his code added the tag `railway=train_station_entrance` 
+## Correcting an issue: Location of the train station
+
+To get the list of the stations, the author used `Open Street Maps` (OSM), by selecting the following tag `railway=train_station_entrance`.
 
 ![Screenshot 2025-03-08 at 22.17.49.png](/assets/images/kebab_analysis/Screenshot_2025-03-08_at_22.17.49.png)
 
@@ -89,14 +94,14 @@ After some trial and error, I found the author’s approach of just searching fo
 
 Given the limited number of station points that I am using (tighter definition), this results were 198 restaurants for Paris, which is manageable. 
 
-# GIS assumptions
+## Distance measurement: Simplified assumptions
 
 Since GIS is not my strong item, and I that didn’t think this ultra accuracy / data integrity is necessary (I mean, I am using a Google API that doesn’t provide comprehensive results, with ratings of questionable quality, with no access to the individual ratings, let alone the review), I am going to assume that the relevant distance is euclidean distance (thus ditching the "walkable" distance). Why?
 
 1. Large cities in France tend to be very dense and walkable. Thus, I suspect (without providing any evidence) that the euclidean distance will correlate nicely with the walkable distance.
 2. A problem can arise when there is a river inside the city. This can screw up things badly. But, normally if the river / canal is narrow, there are crossing in front of the station (anecdotal evidence, I need to find a better way to tackle this). This is not the case if the river is wide, then we are fine (far away is truly far away).
 
-## Notes on the GIS data
+### Notes on the GIS data
 
 From the original post:
 
@@ -242,11 +247,13 @@ So probably the saying should be: the quality of kebab depends non-linearly on b
 
 I am sure this is going to be catchy one day in the common culture.
 
-# Finally
+# Last thoughts
 
 First of all, that was fun. Many thank for the original author (James Pae) for starting this :)
 
-Second, while surely this is just Kebab, it is really disturbing to me that we can’t have access to existing higher quality data (like the Google reviews, or the individual ratings). In parallel with the "right to repair" move, we need the "right to know" move. These leftover datasets are of limited use. While not everyone is expected to dig in the data, some will, to help ourselves make a better and informed decisions.
+Second, there is a good indication the French people indeed live up to their reputation, in perceiving non-linear relationship between the distance and the kebab quality :D
+
+Finally, while surely this is just Kebab, it is really disturbing to me that we can’t have access to existing higher quality data (like the Google reviews, or the individual ratings). In parallel with the "right to repair" move, we need the "right to know" move. These leftover datasets are of limited use. While not everyone is expected to dig in the data, some will, to help ourselves make a better and informed decisions.
 
 # Code
 <script src="https://gist.github.com/osm3000/ca31bfa400af099a82783cd1ec97130a.js"></script>
