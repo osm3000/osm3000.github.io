@@ -3,7 +3,7 @@ import datetime
 
 @click.command()
 @click.option("--title", prompt="The post title", help="Write the title of the post")
-@click.option("--tags", prompt="The post tags", help="Write the tags of the post")
+@click.option("--tags", prompt="The post tags (comma separated)", help="Write the tags of the post")
 def create_new_post(title, tags):
     """
     Create a new empty post for Jekyll blog in the _posts directory, with the correct filename format and the YAML front matter.
