@@ -33,6 +33,9 @@ collections:
   experiments:
     output: true
     permalink: /exp/:title
+  logsfiles:
+    output: true
+    permalink: /logbook/:title
 
 
 # Build settings
