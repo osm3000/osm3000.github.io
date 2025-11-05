@@ -19,11 +19,12 @@ But my story with people has been a mix of triumph and tragedy:
 - And the source of some of my most painful scars.
 
 The tree of life grew and diverged:
-- There are those with whom I lost contact when I moved (before the digital era).
+- There are those with whom I lost contact when I/they moved (before the digital era).
 - And those with whom our relationship didn't thrive in the digital realm.
 - Those whom I wronged.
 - Those who wronged me.
 - Those who, despite surviving so much, didn't survive the changes in context and experience, and with whom we are now stuck in the past and in nostalgia.
+- Those with whom the cultural differences clashed unexpectedly, resulting in confusion and loss of trust.
 - Those I ended up hating, and with whom I ended my relationship.
 - And those who ended up hating me, and who ended their relationship with me.
 - Some passed away.
