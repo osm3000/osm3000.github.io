@@ -37,5 +37,5 @@ def create_new_post(title, tags):
 
 
 if __name__ == "__main__":
-    click.clear()
+    # click.clear()
     create_new_post()
