@@ -1,0 +1,10 @@
+<nav class="site-tabs" role="navigation" aria-label="Primary">
+  <a class="tab{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+  {%- for p in site.pages -%}
+    {%- unless p.url == '/' or p.name == '404.html' or p.nav_exclude == true -%}
+      {%- if p.title -%}
+        <a class="tab{% if page.url == p.url %} active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+</nav>

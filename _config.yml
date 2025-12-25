@@ -26,7 +26,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   I wander the digital universe, seeking the beauty in systems and patterns
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.osm-ai.net" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: osm3000
+# twitter_username: osm3000
+repository: osm3000/osm3000.github.io
 github_username:  osm3000
 linkedin_username: omar-mohammed3000
 google_analytics: G-KXDBM0MM5V
@@ -40,11 +41,15 @@ collections:
     permalink: /logbook/:title
 
 
-# Build settings
-theme: minima
+# Theme choice
+# theme: minima
+# remote_theme: pages-themes/hacker@v0.2.0
+theme: jekyll-theme-hacker
 plugins:
+  # - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -65,3 +70,6 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+kramdown:
+  math_engine: mathjax

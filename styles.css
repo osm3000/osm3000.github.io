@@ -1,67 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+/* Custom overrides and nav styles */
+.site-nav { margin-bottom: 2rem; }
+.site-nav h3 { margin: 0.5rem 0; }
+.site-nav ul { margin: 0 0 1rem 1.25rem; }
+.site-nav ul ul { margin-top: 0.25rem; }
 
-html {
-  /* background-color: #002b36 !important; */
-  background-color: #f5f5f5 !important;
+/* Top tabs navigation */
+.site-tabs { margin: 1rem 0 2rem; display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+.site-tabs .tab { display: inline-block; padding: 0.5rem 1rem; margin: 0; border: 1px solid #2c2c2c; border-radius: 4px; text-decoration: none; }
+.site-tabs .tab.active { background: #2c2c2c; color: #fff; }
+
+/* Align content with Hacker theme: centered container, padded sides */
+.main-content,
+.home,
+article.post {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
-body {
-    /* background-color: #002b36 !important; */
-    background-color: #f5f5f5 !important;
-    /* color: #839496 !important; */
-    /* font-family: "Funnel Display", serif !important; */
-    /* font: 100% monospace !important; */
+/* Center key headings; keep body text readable */
+.home .page-heading,
+.post .post-title { text-align: center; }
+
+/* Center theme header */
+.page-header { text-align: center; }
+.page-header .btn { display: inline-block; margin: 0 0.25rem; }
+.page-header .project-name a { color: inherit; text-decoration: none; }
+.page-header .project-name a:hover { text-decoration: underline; }
+
+/* Responsive images */
+.main-content img,
+.home img,
+article.post img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto 1rem;
 }
 
-h1 {
-  font-size: 2.5em; /* 40px/16=2.5em */
-  /* color: red !important; */
+/* Tag badges */
+.post-tags { margin: 0.5rem 0 1rem; text-align: center; }
+.tag { display: inline-block; padding: 0.2rem 0.5rem; margin: 0 0.25rem 0.25rem; border: 1px solid #2c2c2c; border-radius: 4px; font-size: 0.85em; }
+.post-tags-inline { margin-left: 0.5rem; display: inline-flex; flex-wrap: wrap; gap: 0.1rem; align-items: center; }
+.post-tags-inline .tag { font-size: 0.78em; line-height: 1; padding: 0.15rem 0.45rem; margin-bottom: 1rem; margin-top: 0rem;vertical-align: baseline; border: 1px solid #3a3a3a; border-radius: 4px; background: #1e1e1e; color: #fff; }
+.post-tags-inline .tag:hover { border-color: #4a4a4a; background: #242424; }
 
-  border-color: #094352 !important;
-  /* color: #93a1a1 !important; */
-    /* color: #b58900 !important; */
+/* On small screens, drop tags below the title for breathing room */
+@media (max-width: 480px) {
+	.post-tags-inline { display: block; margin-left: 0; margin-top: 0.25rem; }
 }
 
-h2 {
-  font-size: 1.875em; /* 30px/16=1.875em */
-  /* color: #d33682 !important; */
+/* Comfortable line spacing for body text */
+.main-content p,
+.main-content li,
+.home p,
+.home li,
+article.post p,
+article.post li {
+	line-height: 1.5;
 }
-
-h3 {
-  font-size: 1.5em; /* 24px/16=1.5em */
-  /* color: #268bd2 !important; */
-}
-
-h4 {
-  font-size: 1.125em; /* 18px/16=1.125em */
-  /* color: #859900 !important; */
-}
-
-/* li {
-  color: #93a1a1 !important;
-} */
-
-/* 
-a:not([class="site-title"]) {
-  color: #268bd2 !important;
-}
-a:visited {
-  color: #6c71c4 !important;
-} */
-
-/* Style the color of the Site title in the navbar */
-/* a[class="site-title"] {
-    color: #b58900 !important;  
-} */
-
-
-/* @media (prefers-color-scheme: dark) {
-    body {
-        color: #eee;
-        background: #121212;
-    }
-
-    body a {
-        color: #809fff;
-    }
-} */
