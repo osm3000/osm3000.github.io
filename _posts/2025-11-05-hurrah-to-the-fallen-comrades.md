@@ -4,7 +4,7 @@ title: Hurrah to the fallen comrades
 date: 2025-11-05 21:37:08 +0100
 tags: [personal, reflections]
 excerpt: To the real heroes of my life ... my friends
-published: true
+published: false
 ---
 I've lived in 6 countries, on 3 continents, in 15 cities (where 'lived' means 6 months or more). Only once by choice; the rest were either chosen by my parents when I was young, or by necessity (studies or work) as I grew older.
 
