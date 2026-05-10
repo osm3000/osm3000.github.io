@@ -1,0 +1,14 @@
+---
+title: Meetup 1K partners
+date: 2025-07-25 18:13:19 +0100
+description: A brief reaction to Meetup sharing user data with hundreds of partner companies.
+tags:
+- personal
+aliases:
+- /2025/07/25/meetup-1k-partners.html
+---
+When I open Meetup app, and they tell me that my data is shared with 909 other partners....all trustworthy
+
+#YesOfCourse #OnePlusOneEqualFish #LambsToTheCosmicSlaughter
+
+![Meetup app data screenshot](/assets/images/meetup_partners/meetup_partners.jpeg)

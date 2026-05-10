@@ -1,0 +1,48 @@
+---
+title: Setting up the course towards Alife
+date: 2023-12-21 00:00:00 +0200
+description: A manifesto on memory, language, and the conditions for artificial general intelligence.
+tags:
+- alife
+aliases:
+- /2023/12/21/alife-guidelines.html
+---
+# Manifesto
+
+## Memory, Language and Intelligence
+
+One of my main interests is to understand the role in memory in intelligence. Memory, when discussed in the context of machine learning, normally refers to hidden state of a neural network (if you are old fashion), or perhaps to the attention mechanisms in transformers (if you are new fashion). 
+
+But, I don't think that is the full story.
+
+Many years ago, I worked in knowledge-restructuring within the context of artificial intelligence. The idea is that when you learn something, there are multiple steps of transformation that happen to what you learned. You can imagine what you learned as an entity in itself, it will be transformed, and will transform you as well, step by step.
+
+But at a certain point, you can keep all this knowledge in your head, in this mushy state. This is where current machine learning normally stops.
+
+Humans learned the hard way the discretization/digitization provide a much better way to store and retrieve information. You can unlock so much capacity by doing that. Nature learned the same thing: DNA is a discrete representation of the information that is passed from one generation to the next.
+
+This where, I believe, memory comes into play. If you can build a proper discrete memory, with a management system on top of it, then you can unlock a lot of capacity here, especially in the reasoning and planning parts of intelligence.
+
+But this is still a limited thinking. For neural networks, this will be the equivalent of moving from analog to digital computers. This, again, still look at memory as a hidden state of the system: More organized perhaps, but hidden nonetheless.
+
+Intelligence, it seems more and more, an emergent property. It is difficult, if not possible, to predict the emergent properties of a system. But we know that certain conditions need to exist in order for a collection of things, at a scale, to become a complex system. One of these conditions is the ability to communicate. Enter language.
+
+Language, is a memory for the wisdom of the collective, and a mean to communicate the wisdom. It is the key ingredient in a neural network (the fact that the neurons are connected together, and communicating via values governed by activation functions and learned weights). It is the key ingredient in a society (the fact that people are connected together, and communicating via words governed by social norms and learned behaviors).
+
+But language doesn't need to be spoken only. In fact, almost all artifacts manufactured by humans are a form of language. A mug is a memory: its design is a memory of its purpose, and this is communicated visually. A bank is a memory for our money, and a way to communicate this money between different entities.
+
+AI will emerge in a digital city, will become more performant with better memories, and AGI will take a life of its own with many AI agents that know how to build communicable artifacts.
+
+AGI will not be invented, it will be discovered. It is out there already, waiting for the proper medium and conditions to emerge.
+
+## It is all one representation
+While building higher and more appropriate representations (memory, language, etc.) is important, it is also important to remember that it is all one representation. It just depends on what you are looking at. This is when language becomes a problem.
+
+A human, an environment...they are both the same. If they world is represented by 10 variables, an environment is represented by 6, then a human is represented by 4, 3 of those 6, and 1 of the other 4. The world is one big multi-dimensional tensor, and everything in this world is a world in itself, albeit very sparse, to represent our perception and capabilities to interact with the world.
+<!-- 
+# What is next?
+Only experiments, diverse and rigorous, can shade some light on the truth behind these ideas. 
+
+1. ✅ Can I replace tradeoff large feed-forward networks with smaller networks that have a memory? [I have already shown that this is possible over two datasets (MNIST and Fashion-MNIST).](https://personal.osm-ai.net/experiments-on-the-side/memory-vs-depth-in-neural-networks-exploratory-comparison)
+2. When does a language emerge?
+3.  -->

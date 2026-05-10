@@ -5,3 +5,5 @@ _site
 .excalidraw
 _ideation/
 list_of_tags.yaml
+.venv/
+/.quarto/

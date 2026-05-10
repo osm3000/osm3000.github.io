@@ -1,0 +1,51 @@
+---
+title: Clocks and life
+date: 2024-12-26 00:00:00 +0100
+description: Notes on clocks as a possible driver of complexity and intelligence in artificial life.
+tags:
+- alife
+- reflections
+aliases:
+- /2024/12/26/clocks-and-life.html
+---
+I am becoming more and more convinced that clocks are a core component of evolving an intelligent life.
+
+They are like steering the pot: It must be done to distribute the heat evenly, and prevent sticking to the pan’s bottom. 
+
+The complexity of the clocking networks is an ingredient in the rise of complex organism.
+
+Earth is affected by many clocks:
+
+- It’s orbit around itself: night and day
+- It’s orbit around the sun: the 4 seasons
+- The moon orbit around the earth: tide and current (and probably moon light at night as well)
+- The other planets orbits (we know Jupiter as an effect on us)
+- The solar system orbiting the galaxy center
+
+And this is just to name a few.
+
+We do know for sure that these clocks have an effect on life on earth, directly or indirectly.
+
+It is possible that what we consider as randomness is merely an approximation of the interaction of multiple clocks. Randomness still strikes me as an odd idea.
+
+# Random thoughts
+This is me thinking out loudly. I want bad ideas in order to get good ones.
+
+1. How to show, experimentally at least, that a simple clock leads to greater complexity than no clock?
+   1. Probably compare two similar environments, one with clock and one without, and compare the complexity of the agents between them both.
+   2. But what does similar means here?
+2. How to quantify this complexity? Can I aggregate the behaviors of the agents in a representative manner?
+   1. A simple way can be a bag of words: record the frequency of each possible output (in case of discrete actions) over all agents of one setup. Compare those bags of different setups. A complexity maybe represented in the information content of the resulting distribution.
+      1. I am not convinced. Many ungrounded assumptions. Plus, the bag of words operate on single actions only.
+   2. Or perhaps in the difficulty of training a predictor ML model designed to predict the next step: how difficult it is to predict the next move given the previous moves. With a GRU, even MLP, or using a fixed-window traditional model, I can build such model. 
+      1. Complexity in this case is a relative concept, which can be described as the ratio between the number of parameters of two models of similar predictive power.
+      2. I like this idea since it avoids describing an exact measure of complexity, but a relative one, which is more permissive. 
+      3. I can even extend this further, by observing the behavior of the environment at large: if we imagine the environment as a video, then, given some a set of environmental states, what is the difficulty of predicting the next state? The state can include info about the agents, the food, and any other item in the environment. An environment `A` is more complex than environment `B` if it requires larger model to predict its next state given the previous states.
+      4. The environment state can be actually the whole photo frame
+3. How to make a complex network of clocks?
+    1. One can imagine a source clock, and then derivative clocks based on different functions (aka: a tree structure)
+    2. The functions are abstracts for elements of the universe (agents, food...etc) . Each element must relies on input clock, process it to do something, and its output oscillates in a different manner.
+    3. If the function input is similar to its output (aka: identify function), then this element does nothing. A change in clock (a change in phase, frequency or amplitude) reflects some processing has been made.
+    4. Example experiment: one can imagine having $N$ resources on the grid, and $M$ clocks, with each $N$ having a clock that is $\sum_{i}^{M}w_i*clock_{i}$. Let the agents evolve on such a grid. Compare with and without those clocks.
+4. The agents in this case need to do “something” relative to that clock (process the input in a different way, emit something...etc)
+    1. This simulation looks more like a digital circuit. The clock tick of the simulator must be the minimum time unit in order to conduct the simulation. At that tick, all the values of the other clocks are being sampled, and the processing happens accordingly.

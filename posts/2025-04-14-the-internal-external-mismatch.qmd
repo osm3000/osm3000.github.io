@@ -1,0 +1,87 @@
+---
+title: the internal-external mismatch
+date: 2025-04-14 17:35:33 +0100
+description: Draft reflections on burnout, freelancing, and the widening gap between inner and outer reality.
+tags:
+- personal
+- reflections
+draft: true
+aliases:
+- /2025/04/14/the-internal-external-mismatch.html
+---
+Last year was tough. I quit my work due to a growing toxic environment. A hard, yet still a correct decision.
+
+What unfolded afterwords has been a much worse rollercoaster than the one leading to my quittance, where my internal model about the world has been shuttered by the external realities. Nothing will be the same from that moment on.
+
+This will story will span on multiple dimensions:
+1. Relationships
+2. The so called "market"
+3. No more privacy
+4. The fear of failure is widespread
+
+I want to be clear that it is my duty towards myself that I assume full responsibility of my life's enterprise. While my words can take the "accusation" tone, it is not an attempt to shift the blame.
+
+# What happened since?
+One of the smoothing points that eased my quittance decision is what a very dear friend sold me: the freelance market is big, and with my skills I'll be able to secure offers easily. With that dear friend involved in this market...what can possibly go wrong?
+
+Based on my runway, I estimated I can do afford 4 strategic experiments, and 3 pivots, with each experiment lasting 6 months. In order to be caution, I decided to assume 3 experiments and two pivot points, with the resources of the 4th experiment being reserved to develop on potential success of one experiment, or to assist in the bailout if required.
+
+I do measure the quality of a strategic direction based on the abundance of:
+1. Feedback signals
+2. Levers to pull: stated simply, do I've access to the tools and techniques (or learning resources) that satisfy the statement "the more I work, the more lucky I will get in achieving the objective"?
+3. The speed and expense of the iterations: mistakes are inevitable, and with an inherently stochastic environment (perhaps the person in front of you woke up today on the wrong side of bed, putting him in a bad mood, and this is why I lost the contract), access to cheap iterations is favorable (e.g.,: try again with someone else).
+
+So, I gave the freelance option the first 6 months. During these 6 month, I contacted every person I can reach out. I created accounts on many platforms. Some platforms even required interviews...fine, no problem.
+
+Interestingly, that "very dear old" friend who sweetened this road for me not just didn't help, but when a position opened in his team, and I applied, he didn't even bother push my profile to the hiring manager for two weeks, under infinite excuses: laptop is not working, lost contacts from his phone, in flight now...until the job disappeared.
+
+On contrast, another friend, to whom I deeply grateful for her efforts, did a lot to help. Unfortunately, her efforts structural issues in both the market and my defensibility that I didn't consider before. 
+1. The freelance "market" is being invaded by those "gatekeepers": platforms that interface between the engineer and the potential company.
+2. They platforms have their own incentives. Many are simply playing the VC game. Thus, they need KPIs to show. What better than: hey, we have lots of people on registered on the platform, and we have this arbitrary selection criteria that only small `fuck you %` are selected...because we are really awesome? But what is the easiest selection criteria, that ensures "rarity"....?
+3. ...apparently, in the US, not having "ex-FAANG" or "Ivy-league Alumni" titles in my CV was the deal breaker. In France, the equivalent is not being a graduate from a "grand ecole". PhD in deep machine learning, from CNRS, one of the largest labs in the world, relevant to my work...in machine learning? 4 years of machine learning work experience? 4 more if you count relevance? Nah, thank you.
+
+Now, this is probably intuitive for most of people, but it definitely wasn't for me.
+
+Thus, the success in this boils down to:
+1. Be first: being first to register on one of those platforms is a huge advantage. They need you, so you have the chance to show yourself, and avoid the fate of the masses who would join later.
+2. Connections: you know someone who needs your services. 
+3. Have the right names in your resume.
+
+Another problem is the absence of `levers to pull`: if you ask me what is the best set of things to do in order to improve me odds, I would say...very little.
+- I considered ads, but this is a shady universe, and easy to become a money sinkhole than a tool for success.
+- Content creation: I like to create projects and share them. Perhaps invest more in this direction, as a way to promote myself? But whom I am marketing this too? What is my audience here? Can this be, in a short span of time, be sufficient?
+  - I think content creation is an excellent med-to-long term tool btw, but I think it is questionable on the short term...and there is no point in proving you're right after you're dead...survival is what counts.
+
+
+Now I am in October 2024, the end of the 1st experiment. What to do? Shall I double down on the first experiment? Shall I try a different one?
+
+While the overwhelming advice that I received was to "wait" and things will improve, I decided it is time to bail on freelancing, especially because I did't perceive any `levers to pull`.
+
+While I've ideas that I want to pursue for business, I didn't estimate my runway is long enough to support that. So, I decided to find a job.
+
+After some thinking, I decided on 4 criterion for this job. Achieving 3 of them would be a success.
+1. Gain in reputation: having a large, like FAANG company, in my CV will be a huge win.
+2. Financial: more money == more savings, which implies more options.
+3. Gain in experience: working with top-notch people in a good environment causes growth.
+4. Work-life balance: while self-explanatory, I want to emphasize the dangers of severe mental, physical and social damages from the long-term exposure to stress and toxicity.
+
+Add to that a red line: No more startups. Over the last 5 years, I've worked only in startups, different claims and missions to revolutions whatever. I no longer can recognize where the value is. I saw fantastic products collapse, and shitty and shady products, somehow, thrive and grow. 
+For the latter, I wish to say it is about business model ingenuity, but it feels more about battle tactics to insert these products into enterprises and governments, who are notoriously well known for being bad at getting rid of garbage (aka: too much effort to cancel the contract). 
+Once a contract is secured, it can be used as a certification of confidence to secure more gains.
+These battle tactics are wide range, from relationships, to hijacking the already ailing scientific review process and publish papers, generate length reports and while papers that are intentionally misleading, creating new metrics that show things are better than they are, or ignore the definition of existing metrics without reporting their values, to using armies of lawyers to make meaningless patents.
+
+The end user is a vessel, not a master.
+
+So, what now? I decided it is best to find a job at a well-established companies.
+
+# Dimensions of fracture
+
+## Relationships
+
+## The "Market"
+
+## Privacy
+
+## Fear of failure
+
+# What is next?

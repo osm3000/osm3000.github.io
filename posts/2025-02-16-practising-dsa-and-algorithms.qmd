@@ -1,0 +1,40 @@
+---
+title: Practising DSA and Algorithms
+date: 2025-02-16 12:21:08 +0100
+description: Why I scraped AlgoMonster to build a better workflow for interview-style DSA practice.
+tags:
+- job search
+- projects
+aliases:
+- /2025/02/16/practising-dsa-and-algorithms.html
+---
+In the process of finding a job as a machine learning engineer, one thing that I am facing is [LeetCode-style problems](https://leetcode.com/) on data structures and algorithms.
+
+> Aside from the arguments about the utility of such assessments for software engineers, let aside machine learning engineers, it is already here and upon us. Cope, go independent, accept less, or perish.
+
+I started this journey by doing the [LeetCodes DSA course](https://leetcode.com/explore/featured/card/leetcodes-interview-crash-course-data-structures-and-algorithms/). This was useful to get me up and running with the different concepts. As I continued to solve problems after that though, my level stagnated. I reached certain limits that I didn't know how to cross. 
+
+This reminded me of my previous experience in [learning programming in the early days](/posts/2023-10-27-novice-mistakes.html). The mistake I did that time, impacted by cultural values, was to not look at other people's solutions and codes. It is "cheating".
+
+So this time, I decided to look at the solutions. I needed fresh new ideas and prespectives in order to break out of the current level.
+
+However, the difficulties I faced are:
+1. Several of the LeetCode problems have solutions (the editorial), but not all. 
+2. I didn't find the solutions to be consistent
+3. I hate reading on the computer. I can't focus well. LeetCode - and other platforms - go to a great length to protect their content from copy-pasting or printing.
+
+I came across this [reddit post recently](https://www.redditmedia.com/r/leetcode/comments/1h5d3bc/a_detailed_guide_on_how_i_prepared_for_an/) of a person sharing their experience with DSA to prepare for FAANG companies. One thing they mentioned is that consistent solutions can be found on `Algo.Monster` website, by using the url `https://algo.monster/liteproblems/{problem_number}`, where `problem_number` is the Leetcode problem number.
+
+For some unknown reason, `Algo.Monster` left this part unprotected (no need to subscribe or even login), so I decided to scrape the hell out of it. Let's walk through the process. Below is an example of what you get from using the URL directly.
+
+![Example of what you get from using the URL directly](/assets/images/dsa_practise/algo_monster_basic_1.png)
+
+Now, if I want to print that, only a small part is printable (equivalent of 1 page), out of ~4-6 pages. This is a part of "protecting the content" mentality. 
+
+![Printing the algo monster page directly](/assets/images/dsa_practise/algo_monster_print_2.png)
+
+This is HTML/Javescript witchcraft for sure, some extra transparent layers hiding the true content from the printer. So let's dig into the HTML source code first.
+
+# Final code
+
+<script src="https://gist.github.com/osm3000/c143e325f1601d73d26ade1ccd0e1b7e.js"></script>

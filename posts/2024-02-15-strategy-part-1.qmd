@@ -1,0 +1,27 @@
+---
+title: 'Strategy, Part 1: Early experiences'
+date: 2023-12-21 00:00:00 +0200
+description: Early experiences that shaped my fascination with strategy, war, and military planning.
+tags:
+- strategy
+- planning
+aliases:
+- /2023/12/21/strategy-part-1.html
+---
+# Nuggets
+- Since I was a little boy, I was fascinated by war, for the level of strategy, planning and preparation that it requires. I admit, the technology aspect was, and still is, a huge fascination to me.
+- I do remember watching two japanese anime, one of them is [thunder-jet](https://en.wikipedia.org/wiki/Ginga_Sengoku_Gun%27y%C5%ABden_Rai) (I don't recall the name of the other one). In each one of them, there was this character of the military planner, which was a huge contrast to the warrior character. While the warrior is always appealing (more raw, direct, simpler to understand), the planner was fascinating to me: the level of knowledge required, in terms of the enemy, the environment, the discipline in thinking and behavior, the calmness.
+- One aspect I liked about war is that, sooner or later, reality will strike, and it is the ultimate judgment of the work (and it is also the reason why I am doing engineering vs academia: I like to see the results of my work in the real world).
+- There is a militaristic aspect to my upbringing: war is deeply ingrained in the arabic and islamic culture. I read so many stories of battles, stories of heroism and glory, and how they affected the old world for the better. It was romantic, but always felt light on the planning aspect.
+- Around 2003, things took a very unexpected turn. I was growing about the Yom Kippur war, 1973. The Egyptians claim they won it, and the israelis claim they won it. I didn't question the original narrative, but I was curious to know the origin of these contradictory claims.
+  - So I started reading about that war. I read a book for the Egyptian politician Muhammad Hassnein Heikal. That was shocking to the core: he claimed that the war was a loss for the Egyptians. 
+  - One book led to another, tracing all the way back to the 1948 wars, passing by all the wars in the middle, mostly for the same author. 
+  - I then started reading some other books, mainly Egyptian historians/generals. The narrative was not consistent.
+  - What became clear to me is that I don't know what to do exactly: how do I read these books? how can I make a conclusion?
+  - I came to the realization that I am not in a good position to judge the conduct of the war. Basically every writer was taking me for a walk in his own garden. I need to have a my own judgement.
+  - So I decided it is time to study the first principles of war, and then come back to these claims. I read many of the traditional texts, like Sun-Tzu, Clausewitz, Jomini, and many others. They were great principles, but lacking on application (like, what does this look like in real life?). So I started reading about military planning and tactics, applied throughout the history of war. 
+  - I then stumbled upon a biography for Marshal Zhukov, the head of the red army back in WW2. That was a turning point for me.
+- Famous battles that had deep impact on me:
+  - Battle of Britain
+  - Naval battle of Port Arthur, 1904: Russians vs Japanese: first use of the wireless communication in war, and the first use of the torpedo in war. The power of organization and positioning, using a revolutionary technology, in delivering a decisive blow.
+  -

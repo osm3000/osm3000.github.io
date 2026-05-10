@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+    - favicon.ico
+
+website:
+  title: "Exploring the digital universe"
+  description: "I wander the digital universe, seeking the beauty in systems and patterns"
+  site-url: "https://blog.osm-ai.net"
+  google-analytics: "G-KXDBM0MM5V"
+  favicon: favicon.ico
+  navbar:
+    left:
+      - href: index.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
+      - href: phd-work.qmd
+        text: PhD
+      - href: alife.qmd
+        text: Alife
+      - href: logbook.qmd
+        text: Logbook
+    right:
+      - href: index.xml
+        text: RSS
+      - href: https://github.com/osm3000
+        text: GitHub
+
+format:
+  html:
+    theme: journal

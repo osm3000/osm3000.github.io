@@ -1,0 +1,30 @@
+---
+title: The flawed interpretation of ML in the Suspicious machines
+date: 2025-01-05 00:00:00 +0100
+description: A critique of how the Suspicion Machines investigations interpret machine learning fairness.
+aliases:
+- /2025/01/05/suspisious-machines.html
+---
+Time and time again, we hear about unfairness as a result of applying machine learning algorithms to real life problem. But it is unclear, in most of the cases, what this "unfairness" refer to, let alone being its actual impact when the ML is being truncated from the rest of the system.
+
+[**Suspicion Machine**](https://www.lighthousereports.com/investigation/suspicion-machines/) is a set of investigations made by [LIGHTHOUSE REPORTS](https://www.lighthousereports.com/) in collaboration with different news agencies, like WIRED, concerning the unfair consequences from the use of ML algorithms in the welfare programs in Europe. Three systems has been investigated: The French, Rotterdam (Netherlands) and more recently the Swedish system.
+
+A strong positive point, to their credit, is that they invested time in publishing how they conducted their analysis. This is should be a pattern for news agencies to follow, since it leads to deeper understating of the content, and allows a room for scrutinizing it...
+
+And scrutinization is my objective here, in particular for both the investigations of the French and the Swedish systems.
+
+Simply put, I think their analysis is suffering from:
+1. Missing critical elements required to form such conclusions (French system)
+2. Incorrect methodology (in case of the French system)
+3. Isolating the algorithm from the rest of the system (all systems)
+4. Confusing outcome (the Swedish system)
+
+I will divide this into multiple parts, and I will start with their investigation into the Swedish system, then the French system.
+
+Before we jump into it, I acknowledge the effort and the struggle that they went through to acquire information about these systems and their internals working. Apparently the agencies in question were not willing to collaborate, and only under legal pressure that they finally revealed this information (although the law doesn't seem to work in Sweden). This, unfortunately, is part of a wider trend in Europe, where agencies are protecting themselves from public scrutiny by rejecting sharing data about their inner workings.
+
+On the other side, I understand the situation of those agencies. Releasing such algorithms can and will lead to the gamification of the system. 
+
+I don't know the answer to this dilemma. I don't believe there are absolutes here.
+
+In order to conduct this, I had to review what is "fairness" in machine learning literature. So this is also a take on this issue

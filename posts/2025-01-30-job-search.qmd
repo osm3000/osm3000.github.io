@@ -1,0 +1,40 @@
+---
+title: Job search
+date: 2025-01-30 00:00:00 +0100
+description: Draft reflections on leaving startups, strategy mistakes, and searching for a larger-company role.
+tags:
+- personal
+- reflection
+draft: true
+aliases:
+- /2025/01/30/job-search.html
+---
+Since October, I decided to search for a job in a large enterprise. For the last 4+ years, I've been working in startups, in different capacities in data-related products.
+
+Why the shift?
+1. ML/data and startups have a complicated relationship
+   1. Everyone wants ML, few can afford it, and fewer are truly willing to adopt the "data way of life".
+   2. The main defensibility for the vast majority of startups is in software, not data.
+   3. Given a poor organization knowledge about ML, the expectations from ML are wild.
+2. Buildup of engineering experience
+   1. Everywhere I went, I'm the most senior person. This raise an personal flag about how I will grow in my knowledge and experience.
+   2. I rely heavily on book, tutorials, personal projects, and most critically, on large extra investments "after" work hours. That means that, time wise, true cost of my work is far more than the formal work hours. These extra time investments mean less time for loved ones and building my own thing.
+3. Uncertainty of what's next
+   1. Without big names in my CV (company or university names), my credibility is always under intense pressure. Achievements matter less.
+   2. Getting the next project is thus a continuous uphill battle
+
+I was reflecting a lot on the last point, uncertainty. Uncertainty is not a bad thing in itself, any advance out of the comfort zone will be accompanied by it. However, without clear strategy, policy and tactics, this will amount to the randomness from noise, not randomness from venturing into the unknown. 
+1. The latter lead to progress, moving from one category of problems to another. 
+2. The former is like pouring water in the ocean. 
+
+So in summary about the uncertainty point:
+1. The parent mistake here is that I didn't understand how to effectively promote my work and my services.
+2. The grandparent of this mistake is that I misidentified the battlefield. I thought I am in the engineering domain, and I have invested heavily in that. However, this is a business battlefield first and foremost. 
+3. With this strategic fuckup, the wrong policy was identified, and the wrong tactics were adopted.
+
+But how come this happened? There was a lot of signs of how wrong this was already. My reflections so far:
+1. I always identified myself as a scientist and an engineer in a pure sense. The practice came very naturally to me.
+2. I came from a medium that looks down on self-promotion and this type of communication. Humbleness and humility were always key assets in my uprising. Even though I started to gradually become aware of this over the last few years, and started to see the problematic aspects it creates, I never fully realized how deep these valued are engraved my consciousness.
+3. I relied heavily on my surrounding community to give signals about my positioning. But one befriends people who behave like him. A new actionable hypothesis is unlikely to be born in this environment. So we rely heavily on unactionable hypotheses: the economy is taking a downturn, ethics are changing...etc. 
+   1. This is extremely comforting. But as the observations accumulated, I started to see inexplicable, hard to ignore, contradictions. Even with a downturn, so many are still able to start and maintain businesses. Life keep happening. 
+   2. One aspect is that, while I became extremely good at identifying this problem in Egypt, I was more susceptible to it in France. Most likely this was due to the change in people, and the type of reasoning used. I learned the observable patterns of the Egyptian society, but not the meta-pattern across different societies.
