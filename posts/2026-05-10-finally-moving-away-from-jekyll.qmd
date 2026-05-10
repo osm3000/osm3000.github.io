@@ -1,0 +1,26 @@
+---
+title: Finally moving away from Jekyll
+date: 2026-05-10 00:00:00 +0100
+description: <A description of the post>
+categories:
+- personal
+tags:
+- personal
+---
+
+For a long time now, I've been trying to move my blog and website away from Jekyll. I never liked the base theme, and changing it proved to be a nightmare. Even after unleashing Copilot on this task, I was never satisfied with the results.
+
+On a different topic, I also didn't like *Microsoft PowerPoint* and his brother *Google Presentation* that much for making presentations. I loved Mermaid charts, and I wanted to use more of them, and I am also growing a lot of interest in simple text only tools. 
+
+
+I needed to do a presentation for work, and while I am not big on trying new tools, but my sheer annoyance with Google Presentations finally pushed me to explore other options.
+
+Where did all of this lead?
+
+I stumbled upon [Quarto](https://quarto.org/)! It uses a flavor of markdown, incredibly flexible, and I can make beautiful presentations using text only. And I render Mermaid charts!! I delivered a kick-ass presentation that I was proud of. 
+
+After that presentation, I went throw most of the published documentation. It was indicated it can be used for websites, blogs and books.
+
+I've moved that blog countless times now, between WordPress, Jekyll to Notion to Obsidian to .... I can't keep count. Each time was more painful than the other. To ease the move this time, I just prompted Github Copilot. It took around a couple of hours of iterations, but finally the output is pretty good.
+
+What I hope to find soon is WYSIWYG editor for Quarto. But for now, it looks neat enough 😇
