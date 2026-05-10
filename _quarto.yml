@@ -1,6 +1,18 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "posts/*.qmd"
+    - "logs/*.qmd"
+    - "!posts/2023-12-04-techno-optimisim.qmd"
+    - "!posts/2025-01-30-job-search.qmd"
+    - "!posts/2025-03-30-marvin-minsky-mit-lectures.qmd"
+    - "!posts/2025-04-14-the-internal-external-mismatch.qmd"
+    - "!posts/2025-04-15-loneliness.qmd"
+    - "!posts/2025-04-23-losing-the-fight-for-privacy.qmd"
+    - "!posts/2025-10-06-torn-apart.qmd"
+    - "!posts/2025-11-05-hurrah-to-the-fallen-comrades.qmd"
   resources:
     - CNAME
     - favicon.ico

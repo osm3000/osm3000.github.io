@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import re
 import shutil
 from datetime import date, datetime
@@ -9,7 +10,36 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ROOT = ROOT.parent
+QUARTO_CONFIG = ROOT / "_quarto.yml"
+GITIGNORE_FILE = ROOT / ".gitignore"
+GITIGNORE_DRAFTS_START = "# quarto-migration draft posts"
+GITIGNORE_DRAFTS_END = "# /quarto-migration draft posts"
+
+
+def find_source_root() -> Path:
+    configured_root = os.environ.get("JEKYLL_SOURCE_ROOT")
+    if configured_root:
+        source_root = Path(configured_root).expanduser().resolve()
+        if (source_root / "_posts").exists():
+            return source_root
+        raise FileNotFoundError(f"Configured JEKYLL_SOURCE_ROOT has no _posts directory: {source_root}")
+
+    direct_parent = ROOT.parent
+    if (direct_parent / "_posts").exists():
+        return direct_parent
+
+    backup_candidates = sorted(
+        path for path in ROOT.parent.glob(f"{ROOT.name}-backup-*") if (path / "_posts").exists()
+    )
+    if backup_candidates:
+        return backup_candidates[-1]
+
+    raise FileNotFoundError(
+        "Could not find a Jekyll source directory. Set JEKYLL_SOURCE_ROOT or place a sibling backup next to the Quarto site."
+    )
+
+
+SOURCE_ROOT = find_source_root()
 SOURCE_POSTS = SOURCE_ROOT / "_posts"
 SOURCE_PAGES = SOURCE_ROOT / "pages"
 SOURCE_LOGS = SOURCE_ROOT / "_logsfiles"
@@ -283,6 +313,45 @@ def copy_site_artifacts() -> None:
         shutil.copy2(SOURCE_FAVICON, TARGET_FAVICON)
 
 
+def sync_quarto_render(draft_paths: list[str]) -> None:
+    config = yaml.safe_load(QUARTO_CONFIG.read_text(encoding="utf-8")) or {}
+    project = config.setdefault("project", {})
+    render_targets = ["*.qmd", "posts/*.qmd", "logs/*.qmd"]
+    render_targets.extend(f"!{draft_path}" for draft_path in draft_paths)
+    project["render"] = render_targets
+    QUARTO_CONFIG.write_text(
+        yaml.safe_dump(config, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+
+
+def sync_gitignore_drafts(draft_paths: list[str]) -> None:
+    lines = GITIGNORE_FILE.read_text(encoding="utf-8").splitlines()
+    filtered_lines: list[str] = []
+    skip_block = False
+
+    for line in lines:
+        if line == GITIGNORE_DRAFTS_START:
+            skip_block = True
+            continue
+        if line == GITIGNORE_DRAFTS_END:
+            skip_block = False
+            continue
+        if not skip_block:
+            filtered_lines.append(line)
+
+    while filtered_lines and filtered_lines[-1] == "":
+        filtered_lines.pop()
+
+    if draft_paths:
+        filtered_lines.append("")
+        filtered_lines.append(GITIGNORE_DRAFTS_START)
+        filtered_lines.extend(draft_paths)
+        filtered_lines.append(GITIGNORE_DRAFTS_END)
+
+    GITIGNORE_FILE.write_text("\n".join(filtered_lines) + "\n", encoding="utf-8")
+
+
 def migrate_posts() -> None:
     source_paths = [
         source_path
@@ -309,12 +378,15 @@ def migrate_posts() -> None:
         source_path.stem: unified_post_html_path(source_path)
         for source_path in source_paths
     }
+    draft_paths: list[str] = []
 
     for source_path in source_paths:
         metadata, body = split_front_matter(source_path.read_text(encoding="utf-8"))
         transformed = transform_front_matter(metadata)
         transformed["aliases"] = redirect_aliases(source_path, metadata)
         target_path = TARGET_POSTS / sanitize_filename(source_path)
+        if transformed.get("draft") is True:
+            draft_paths.append(target_path.relative_to(ROOT).as_posix())
         write_document(
             target_path,
             transformed,
@@ -327,6 +399,8 @@ def migrate_posts() -> None:
     migrate_logs()
     copy_assets()
     copy_site_artifacts()
+    sync_quarto_render(draft_paths)
+    sync_gitignore_drafts(draft_paths)
 
 
 if __name__ == "__main__":
