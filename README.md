@@ -18,7 +18,7 @@ The migration script:
 - migrates `_logsfiles/` into Quarto pages under `logs/`
 - creates a Quarto logbook index page
 - converts Jekyll metadata into Quarto-friendly front matter
-- rewrites Jekyll `{% post_url %}` links
+- rewrites Jekyll post link references into Quarto-friendly paths
 - copies the current `assets/` directory into this project
 - copies the existing `favicon.ico` and `CNAME` files for GitHub Pages deployment
 
