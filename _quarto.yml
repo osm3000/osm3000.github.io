@@ -13,6 +13,7 @@ project:
     - "!posts/2025-04-23-losing-the-fight-for-privacy.qmd"
     - "!posts/2025-10-06-torn-apart.qmd"
     - "!posts/2025-11-05-hurrah-to-the-fallen-comrades.qmd"
+    - "!posts/2026-05-10-playing-risk-with-neural-networks---part-1.qmd"
   resources:
     - CNAME
     - favicon.ico
