@@ -4,15 +4,17 @@ date: 2026-05-10 23:00:00 +0100
 description: <A description of the post>
 categories:
 - machine-learning
-    
+	
 tags:
 - machine-learning
-    
+	
 ---
 
 I'm a huge fan of Risk, especially a online version called [Warzone](https://war.app/). I don't like to play with humans since I don't like to wait for their action, and I get irritated by players leaving in the middle of the game, thus, I mostly play against bots. After countless hours of playing, the bots behavior become predictable. I was always curious whether I can build a bot to play the game for me.
 
 That project provided several new challenges for me: implement the game engine, find a representation for the problem that fits a neural network controller, and then a reasonable training paradigm that can work.
+
+Another thing that I wanted to experiment with is using LLMs to do the heavy lifting
 
 If you are not familiar with Risk, it simply a turn-based strategy game, where the objective is to conquer the world by controlling all the territories. Each player starts with a few territories, and then they can attack their neighbors to conquer more territories. The game is won by the player who controls all the territories. Watch this [video](https://www.youtube.com/watch?v=5g48vXnnf30) for a quick introduction to the game.
 
@@ -21,12 +23,13 @@ If you are not familiar with Risk, it simply a turn-based strategy game, where t
 2. Game representation: A graph, where the nodes represents countries, and the edges represent connections between them. I considered using NetworkXX here (I was too excited about it), but it felt like an overkill
 3. Learning problem formulation: 
    1. Single MLP with two heads (reinforcement and attack). 
-      1. Why note Graph Neural Network? I am confident it be even better, but right now I am not very familiar with it, thus, I am leaving it for next phase, once the learning system has stabilized.
+	  1. Why note Graph Neural Network? I am confident it be even better, but right now I am not very familiar with it, thus, I am leaving it for next phase, once the learning system has stabilized.
    2. We are assessing the edges between each two states
    3. Inputs
-      1. Node 1 (my team) force
-      2. Node 2 (my team / adversary) force
+	  1. Node 1 force
+	  2. Node 2 force
+	  3. Node 2 belongs to who
    4. Outputs
-      1. Reinforcement head will score every possible edge between my nodes, and will provide a score accordingly. The reinforcement is allocated proportionally to the score
-      2. Attack head will score every possible attack edge, provide a score. Stop (aka: do nothing at all) is provided. Either a single attack will happen with all force, or nothing will happen
-   5. 
+	  1. Reinforcement head will score every possible edge between my nodes, and will provide a score accordingly. The reinforcement is allocated proportionally to the score
+	  2. Attack head will score every possible attack edge, provide a score. Stop (aka: do nothing at all) is provided. Either a single attack will happen with all force, or nothing will happen
+4. 
