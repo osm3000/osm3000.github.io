@@ -24,11 +24,23 @@ If you are not familiar with Risk, it simply a turn-based strategy game, where t
 3. Learning problem formulation: 
    1. Single MLP with two heads (reinforcement and attack). 
 	  1. Why note Graph Neural Network? I am confident it be even better, but right now I am not very familiar with it, thus, I am leaving it for next phase, once the learning system has stabilized.
+   2. There are general inputs
    2. We are assessing the edges between each two states
    3. Inputs
-	  1. Node 1 force
-	  2. Node 2 force
-	  3. Node 2 belongs to who
+      1. General inputs (for both attack and reinforcement)
+         1. % of all territories the bot control
+         2. % of all territories the enemy control
+         3. % of total armies the bot
+         4. % of total armies the enemy has
+         5. % of border territories the bot has (border territory is one connected with at least one enemy territory)
+         6. % of border territories the enemy has
+         7. Turn index (normalized by the total number of turns in the game)
+         8. ???? Reinforcements left from the previous turn (normalized by the total number of reinforcements in the game)
+         9. 2 bit indictor, whether the outcome is for reinforcement head or the attack head
+      2. Attack related
+         1. 
+      3. Reinforcement Related
+         1. 
    4. Outputs
 	  1. Reinforcement head will score every possible edge between my nodes, and will provide a score accordingly. The reinforcement is allocated proportionally to the score
 	  2. Attack head will score every possible attack edge, provide a score. Stop (aka: do nothing at all) is provided. Either a single attack will happen with all force, or nothing will happen
