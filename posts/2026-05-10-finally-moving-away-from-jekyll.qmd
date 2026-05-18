@@ -12,7 +12,6 @@ For a long time now, I've been trying to move my blog and website away from Jeky
 
 On a different topic, I also didn't like *Microsoft PowerPoint* and his brother *Google Presentation* that much for making presentations. I loved Mermaid charts, and I wanted to use more of them, and I am also growing a lot of interest in simple text only tools. 
 
-
 I needed to do a presentation for work, and while I am not big on trying new tools, but my sheer annoyance with Google Presentations finally pushed me to explore other options.
 
 Where did all of this lead?
@@ -22,5 +21,11 @@ I stumbled upon [Quarto](https://quarto.org/)! It uses a flavor of markdown, inc
 After that presentation, I went throw most of the published documentation. It was indicated it can be used for websites, blogs and books.
 
 I've moved that blog countless times now, between WordPress, Jekyll to Notion to Obsidian to .... I can't keep count. Each time was more painful than the other. To ease the move this time, I just prompted Github Copilot. It took around a couple of hours of iterations, but finally the output is pretty good.
+
+What did I want originally:
+1. Merge the website and the blog concept together
+2. Filter the blogs by tags
+3. Have a decent look from the beginning
+4. QMD markup is a small step beyond basic markdown, where I can create columns and citations, without resorting to HTML syntax
 
 What I hope to find soon is WYSIWYG editor for Quarto. But for now, it looks neat enough 😇
