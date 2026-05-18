@@ -18,10 +18,16 @@ Another thing that I wanted to experiment with is using LLMs to do the heavy lif
 
 If you are not familiar with Risk, it simply a turn-based strategy game, where the objective is to conquer the world by controlling all the territories. Each player starts with a few territories, and then they can attack their neighbors to conquer more territories. The game is won by the player who controls all the territories. Watch this [video](https://www.youtube.com/watch?v=5g48vXnnf30) for a quick introduction to the game.
 
+For many years now, I've been inspired by the folllowing works:
+1. [AlphaGo](https://deepmind.com/research/case-studies/alphago-the-story-so-far): the first AI to beat a human world champion in the game of Go.
+2. Blondie24, by David Fogel, which is a checkers-playing program that learns by playing against itself using evolutionary algorithms.
+3. Karl Sims work in evolving life-like digital creatures
+4. Evolutionary algorithms and robotics, a domain in which I did two internships. 
+
 ## TOC
 1. Simplification of the game: assumptions (small map, no continents or cards) and game phases (reinforcement, attack)
 2. Game representation: A graph, where the nodes represents countries, and the edges represent connections between them. I considered using NetworkXX here (I was too excited about it), but it felt like an overkill
-3. Learning problem formulation: 
+3. Learning problem formulation
    1. Single MLP with two heads (reinforcement and attack). 
 	  1. Why note Graph Neural Network? I am confident it be even better, but right now I am not very familiar with it, thus, I am leaving it for next phase, once the learning system has stabilized.
    2. There are general inputs
@@ -44,4 +50,45 @@ If you are not familiar with Risk, it simply a turn-based strategy game, where t
    4. Outputs
 	  1. Reinforcement head will score every possible edge between my nodes, and will provide a score accordingly. The reinforcement is allocated proportionally to the score
 	  2. Attack head will score every possible attack edge, provide a score. Stop (aka: do nothing at all) is provided. Either a single attack will happen with all force, or nothing will happen
-4. 
+4. Optimizer used: OpenAI-ES (Make this in a separate article)
+   1. Why? I am fond of EA methods, and I am more familiar with it, compare to RL methods like PPO
+   2. Explain how it works
+   3. How does it compare to traditional ES, GA and hill climbing algorithms 
+5. Optimization problem: the core of the problem is a zero-sum: given a game, determine the winner (the player with the most territories). At each training step, the candidates are evaluate against a repertoire of solutions (including heuristics-based solutions and an archive of previous champions). This provide a curriculum to learn the policy, and a self-play mechanism, to let the policy to be better against good previous versions, with a gradual increase in the difficulty of the opponents.
+   1. Training
+   2. Verification
+   3. Testing
+   4. Gating
+6. Experimentation, failures, and progress so far
+   1. Simple training repertoire of heuristics-based solutions (random, greedy, etc.) for training
+   2. Self-play: Adding a more complex training repertoire, containing weighted heuristics and an archive of previous champions. 
+   3. Adding gating mechanism, in aspiration to get a Alpha-go like system
+   4. Adding verification step, a fixed repertoire of solutions, to be used as a selection criteria for checkpoints
+   5. Add more heuristics-based bots to the ??? repertoire
+   6. Behavioral descriptors (used for analysis only at the moment)
+7. What is next?
+   1. Continents and cards next. The setup is now mature for that
+   2. Increase the size of the map
+   3. Graph Neural Networks
+   4. Add the fog of war (partial observability)
+   5. Work on better visualization, and interactive play interface
+   6. Try new algorithms: MAP-ELITE, Neat, and HyperNeat, and compare performances
+   7. Run the training for a considerably long time (few days on a VM, with checkpoints saved on GCS)
+   8. Try bigger models, and see how it impact performance (make a graph of performance vs model size)
+   9. Generalization over many maps: I want to reach a point where I can generate maps at random, with random contents, and I want that thing to smash it (this will happen after the Graph Neural Network for sure)
+   10. On a different note: 
+       1.  Find a way to conduct research with this new paradigm of LLM-driven development.
+       2.  Create a research position strategy. Given the current work, traverse arxiv for relevant papers, and try to find a good position for my current work as the next step in the research landscape, hopefully to be able to publish it in a good conference.
+       3.  On the that topic, I can also use a similar strategy to identify low-hanging fruits for research, from arxiv, based on some interesting criteria for me (like domain), and then tackle them one by one. For example, I don't know what is the latest in ES algorithms, or what has been done on OpenAI-ES since its publication. Perhaps few more configurations and extensions are required to get a better performance, and that can be a good research contribution.
+   11. Expand to adjacent games: the one in by mind is "battleship"
+8. Impressions about using vibe coding for science experiments
+   1. The ability to quickly iterate and test ideas is amazing. I can go from an idea to a working prototype in a matter of hours, which is something that I couldn't do before. This allows me to test more ideas, and to learn faster.
+   2. However, there were several instances where I lost control over what is happening.
+      1. The rate of new vocabulary and concepts thrown at me from the LLM was very high. I am experimenting with adding strict set of vocabulary.
+      2. I am not convinced that natural language only is sufficient. Programming used to provide a formal language to express ideas. I am not sure what comes next now. Perhaps falling back to mathematical notation, or perhaps a new formal language that is more suitable for this new paradigm. I am not sure yet.
+      3. Price is not a concern now, but it will be something to keep in mind, once all those services will charge by token used.
+      4. I started to empathize with my PhD supervisor and my managers sometimes. Now that I am in that seat (I am the one receiving the results), that if your hands is not in the code, the communication becomes very difficult. Natural language, at high speed, produce an immense cognitive load. I do wonder nowadays whether it was better to communicate with my supervisor using math, pseudo code and diagrams.
+      5. It's here to stay for sure, but the manner of communication is unclear.
+      6. These technologies are not freeing us, or reducing our workload. Work is infinite by its nature. If I am 10x faster and better now, doesn't mean that I will have 10x less work.
+   3. One possible meta-point is to interface more and more with the code using a single YAML file, with a strict vocabulary, and always have a CLI interface for the experiment. Anything I am interested in controlling myself, I should instruct the LLM to expose it in the CLI and the YAML file. 
+   4. Another option is to force the LLM to produce a condensed formal language during the communication, like using more math and pseudo code, and less natural language. 
